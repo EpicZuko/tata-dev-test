@@ -2,6 +2,7 @@ import React from 'react'
 import Carousel from 'react-multi-carousel'
 import styled from 'styled-components'
 import 'react-multi-carousel/lib/styles.css'
+import { storiesCard } from '../../utils/constants/URL'
 
 const Wrapper = styled.div`
   max-width: 1320px;
@@ -21,12 +22,18 @@ const Wrapper = styled.div`
   }
   .react-multiple-carousel__arrow--left {
     left: 10px;
+    &:hover {
+      background: rgba(0, 111, 51, 1);
+    }
     @media (max-width: 430px) {
       display: none;
     }
   }
   .react-multiple-carousel__arrow--right {
     right: 10px;
+    &:hover {
+      background: rgba(0, 111, 51, 1);
+    }
     @media (max-width: 430px) {
       display: none;
     }
@@ -73,32 +80,9 @@ const TEXTH1 = styled.h1`
 `
 
 const StoriesCardSlick = ({ dataArrayCard, onClick }) => {
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 1024 },
-      items: 6,
-    },
-    desktop: {
-      breakpoint: { max: 1024, min: 800 },
-      items: 6,
-    },
-    tablet: {
-      breakpoint: { max: 800, min: 464 },
-      items: 3,
-    },
-    mobileLarge: {
-      breakpoint: { max: 428, min: 320 },
-      items: 4,
-    },
-    mobile: {
-      breakpoint: { max: 320, min: 0 },
-      items: 1,
-    },
-  }
-
   return (
     <Wrapper>
-      <Carousel responsive={responsive}>
+      <Carousel responsive={storiesCard}>
         {dataArrayCard?.map((element) => (
           <StoriesContainer key={element?.id} onClick={onClick}>
             <IMAGES src={element?.images} alt='images' />

@@ -18,13 +18,13 @@ const ModalWrapper = styled.div`
 
 const ModalContent = styled.div`
   background: white;
-  padding: 20px;
+  /* padding: 20px; */
   border-radius: 20px;
   width: ${({ width }) => width || '90%'};
   max-width: 1046px;
   height: ${({ height }) => height || 'auto'};
   max-height: 90vh;
-  overflow: auto;
+  /* overflow: auto; */
   position: relative;
   text-align: center;
 `

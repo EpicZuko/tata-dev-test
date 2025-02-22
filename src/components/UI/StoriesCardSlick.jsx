@@ -1,8 +1,8 @@
-import React from 'react'
-import Carousel from 'react-multi-carousel'
-import styled from 'styled-components'
-import 'react-multi-carousel/lib/styles.css'
-import { storiesCard } from '../../utils/constants/URL'
+import React from "react";
+import Carousel from "react-multi-carousel";
+import styled from "styled-components";
+import "react-multi-carousel/lib/styles.css";
+import { storiesCard } from "../../utils/constants/URL";
 
 const Wrapper = styled.div`
   max-width: 1320px;
@@ -38,7 +38,7 @@ const Wrapper = styled.div`
       display: none;
     }
   }
-`
+`;
 const StoriesContainer = styled.div`
   width: 100%;
   max-width: 180px;
@@ -50,19 +50,20 @@ const StoriesContainer = styled.div`
   @media (max-width: 430px) {
     margin: 0px 0px 0px 0px;
   }
-`
+`;
 
 const IMAGES = styled.img`
   width: 200px;
   height: 241px;
   border-radius: 40px;
   background-color: rgba(0, 145, 66, 1);
+  cursor: pointer;
   @media (max-width: 430px) {
     width: 101px;
     background-color: rgba(0, 145, 66, 1);
     height: 121px;
   }
-`
+`;
 
 const TEXTH1 = styled.h1`
   font-family: Nunito Sans;
@@ -77,21 +78,23 @@ const TEXTH1 = styled.h1`
     margin-top: 0px;
     font-size: 12.02px;
   }
-`
+`;
 
 const StoriesCardSlick = ({ dataArrayCard, onClick }) => {
   return (
-    <Wrapper>
-      <Carousel responsive={storiesCard}>
-        {dataArrayCard?.map((element) => (
-          <StoriesContainer key={element?.id} onClick={onClick}>
-            <IMAGES src={element?.images} alt='images' />
-            <TEXTH1>{element?.name}</TEXTH1>
-          </StoriesContainer>
-        ))}
-      </Carousel>
-    </Wrapper>
-  )
-}
+    <>
+      <Wrapper>
+        <Carousel responsive={storiesCard}>
+          {dataArrayCard?.map((element) => (
+            <StoriesContainer key={element.id} onClick={onClick}>
+              <IMAGES src={element.images} alt="images" />
+              <TEXTH1>{element.name}</TEXTH1>
+            </StoriesContainer>
+          ))}
+        </Carousel>
+      </Wrapper>
+    </>
+  );
+};
 
-export default StoriesCardSlick
+export default StoriesCardSlick;

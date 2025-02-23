@@ -10,6 +10,10 @@ const Wrapper = styled.div`
   display: block;
   align-items: center;
   justify-content: center;
+  padding: 100px 0px 100px 0px;
+  @media (max-width: 450px) {
+    padding: 64px 0px 24px 0px;
+  }
   .react-multiple-carousel__arrow {
     background-color: rgba(255, 255, 255, 1);
     border: none;

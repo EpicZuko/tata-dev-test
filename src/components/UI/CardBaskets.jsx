@@ -3,9 +3,6 @@ import styled from "styled-components";
 import Button from "../UI/Button";
 import basketimages from "../../assets/icons/image (2).svg";
 
-const Basket = styled.div`
-  display: flex;
-`;
 const BasketDiv = styled.div`
   display: flex;
   background-color: rgba(247, 247, 247, 1);

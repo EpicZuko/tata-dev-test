@@ -10,8 +10,11 @@ const Wrapper = styled.div`
   display: block;
   align-items: center;
   justify-content: center;
+  padding: 0px 0px 100px 0px;
   @media (max-width: 450px) {
-    padding: 0px 0px 0px 50px;
+    padding: 0px 10px 0px 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
   }
   .react-multiple-carousel__arrow {
     background-color: rgba(255, 255, 255, 1);
@@ -51,9 +54,9 @@ const DIVMOSTPOPULAR = styled.div`
   height: 187px;
   border-radius: 30px;
   @media (max-width: 450px) {
-    width: 297px;
+    width: 410px;
     height: 127px;
-    border-radius: 20.31px;
+    border-radius: 20px;
   }
 `
 const PopularImages = styled.img`

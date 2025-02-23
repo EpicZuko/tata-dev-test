@@ -9,6 +9,10 @@ const CardAndGrillStyled = styled.div`
   align-items: center;
   justify-content: center;
   gap: 24px;
+  margin: 0px 0px 100px 0px;
+  @media (max-width: 450px) {
+    margin: 0px 0px 24px 0px;
+  }
 `;
 const PRODUCTCARD = styled.div`
   background-color: rgba(247, 247, 247, 1);

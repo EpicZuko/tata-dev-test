@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import Button from './Button'
-import Modal from './Modal'
+import React, { useState } from "react";
+import styled from "styled-components";
+import Button from "./Button";
+import Modal from "./Modal";
 
 const CardAndGrillStyled = styled.div`
   display: flex;
@@ -9,7 +9,11 @@ const CardAndGrillStyled = styled.div`
   align-items: center;
   justify-content: center;
   gap: 24px;
-`
+  margin: 100px 0px 100px 0px;
+  @media (max-width: 450px) {
+    margin: 24px 0px 24px 0px;
+  }
+`;
 const PRODUCTCARD = styled.div`
   background-color: rgba(247, 247, 247, 1);
   width: 312px;
@@ -22,7 +26,7 @@ const PRODUCTCARD = styled.div`
     width: 388px;
     height: 399px;
   }
-`
+`;
 const IMAGESTYLED = styled.img`
   width: 312px;
   height: 188px;
@@ -33,7 +37,7 @@ const IMAGESTYLED = styled.img`
     width: 388px;
     height: 234px;
   }
-`
+`;
 const NAMESTYLEDH1 = styled.h1`
   font-family: Nunito Sans;
   font-weight: 700;
@@ -46,13 +50,13 @@ const NAMESTYLEDH1 = styled.h1`
     font-weight: 700;
     font-size: 24px;
   }
-`
+`;
 const TEXTPARAGRAP = styled.p`
   font-family: Nunito Sans;
   font-weight: 500;
   font-size: 16px;
   padding-left: 16px;
-`
+`;
 const PRICEANDBUTTONCONTAINER = styled.div`
   display: flex;
   align-items: center;
@@ -60,32 +64,32 @@ const PRICEANDBUTTONCONTAINER = styled.div`
   height: 36px;
   justify-content: space-between;
   padding: ${(props) =>
-    props.price > 0 ? '5px 16px 0px 16px' : '45px 16px 0px 16px'};
+    props.price > 0 ? "5px 16px 0px 16px" : "45px 16px 0px 16px"};
   @media (max-width: 428px) {
     width: 356px;
     height: 36px;
     justify-content: space-between;
     line-height: 28px;
   }
-`
+`;
 const PRICE = styled.h3`
   font-family: Nunito Sans;
   font-weight: 700;
   font-size: 20px;
   line-height: 28px;
-`
+`;
 const PRICEDISCOUNT = styled.h3`
   font-family: Nunito Sans;
   font-weight: 400;
   font-size: 16px;
   text-decoration: line-through;
   padding: 20px 0px 0px 16px;
-`
+`;
 const MODALCONT = styled.div`
   @media (max-width: 800px) {
     display: none;
   }
-`
+`;
 const DIVMODAL = styled.div`
   display: flex;
   align-items: flex-start;
@@ -94,7 +98,7 @@ const DIVMODAL = styled.div`
     display: flex;
     flex-direction: column;
   }
-`
+`;
 
 const IMAGESCARD = styled.img`
   width: 523px;
@@ -108,7 +112,7 @@ const IMAGESCARD = styled.img`
     border-bottom-left-radius: 0px;
     /* border-radius: 16.76px; */
   }
-`
+`;
 const ModalH1 = styled.h1`
   font-family: Nunito Sans;
   font-weight: 700;
@@ -122,7 +126,7 @@ const ModalH1 = styled.h1`
     line-height: 20.64px;
     margin-left: 20px;
   }
-`
+`;
 const ModalP = styled.p`
   font-family: Nunito Sans;
   font-weight: 500;
@@ -133,7 +137,7 @@ const ModalP = styled.p`
   @media (max-width: 450px) {
     margin: 0px 0px 20px 20px;
   }
-`
+`;
 const ToggleWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -149,7 +153,7 @@ const ToggleWrapper = styled.div`
     height: 56px;
     margin: 0px 0px 0px 20px;
   }
-`
+`;
 
 const ToggleLabel = styled.label`
   width: 204px;
@@ -166,18 +170,18 @@ const ToggleLabel = styled.label`
   line-height: 22.4px;
   cursor: pointer;
   transition: 0.3s;
-  background: ${({ active }) => (active ? 'white' : 'transparent')};
-  font-weight: ${({ active }) => (active ? 'bold' : 'normal')};
-`
+  background: ${({ active }) => (active ? "white" : "transparent")};
+  font-weight: ${({ active }) => (active ? "bold" : "normal")};
+`;
 const ButtonsDiv = styled.div`
   margin: 0px 0px 0px 36px;
   @media (max-width: 450px) {
     margin: 36px 0px 0px 20px;
   }
-`
+`;
 const ToggleInput = styled.input`
   display: none;
-`
+`;
 const StyledH1 = styled.h1`
   font-family: Nunito Sans;
   font-weight: 700;
@@ -188,16 +192,16 @@ const StyledH1 = styled.h1`
     margin: 0px 0px 200px 0px;
     font-size: 24px;
   }
-`
+`;
 const CardAndGrill = ({ dataArray, onClick }) => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [selected, setSelected] = useState('13-14 кг')
-  const [selectedCard, setSelectedCard] = useState(null)
+  const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState("13-14 кг");
+  const [selectedCard, setSelectedCard] = useState(null);
 
   const handleCardClick = (card) => {
-    setSelectedCard(card)
-    setIsOpen(true)
-  }
+    setSelectedCard(card);
+    setIsOpen(true);
+  };
 
   return (
     <>
@@ -205,24 +209,24 @@ const CardAndGrill = ({ dataArray, onClick }) => {
         <Modal
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
-          width='1046px'
-          height='434px'
+          width="1046px"
+          height="434px"
         >
           {selected && (
             <DIVMODAL>
               <div>
-                <IMAGESCARD src={selectedCard?.images} alt='images' />
+                <IMAGESCARD src={selectedCard?.images} alt="images" />
               </div>
               <div>
                 <ModalH1>{selectedCard?.name}</ModalH1>
                 <ModalP>{selectedCard?.desicription}</ModalP>
                 <ToggleWrapper>
-                  {['7-8 кг', '13-14 кг', '19-20 кг'].map((weight) => (
+                  {["7-8 кг", "13-14 кг", "19-20 кг"].map((weight) => (
                     <div key={weight}>
                       <ToggleInput
-                        type='radio'
+                        type="radio"
                         id={weight}
-                        name='weight'
+                        name="weight"
                         value={weight}
                         checked={selected === weight}
                         onChange={() => setSelected(weight)}
@@ -239,7 +243,7 @@ const CardAndGrill = ({ dataArray, onClick }) => {
 
                 <ButtonsDiv>
                   <StyledH1>{selectedCard?.price} сом</StyledH1>
-                  <Button variant='Добавить в корзину'>
+                  <Button variant="Добавить в корзину">
                     Добавить в корзину
                   </Button>
                 </ButtonsDiv>
@@ -254,7 +258,7 @@ const CardAndGrill = ({ dataArray, onClick }) => {
           <PRODUCTCARD key={element?.id}>
             <IMAGESTYLED
               src={element?.images}
-              alt='images'
+              alt="images"
               onClick={() => handleCardClick(element)}
             />
             <NAMESTYLEDH1>{element?.name}</NAMESTYLEDH1>
@@ -265,14 +269,14 @@ const CardAndGrill = ({ dataArray, onClick }) => {
             <PRICEANDBUTTONCONTAINER price={element.discount}>
               <PRICE>от {element?.price} сом</PRICE>
               <div>
-                <Button onClick={onClick} variant='добавить корзины' />
+                <Button onClick={onClick} variant="добавить корзины" />
               </div>
             </PRICEANDBUTTONCONTAINER>
           </PRODUCTCARD>
         ))}
       </CardAndGrillStyled>
     </>
-  )
-}
+  );
+};
 
-export default CardAndGrill
+export default CardAndGrill;

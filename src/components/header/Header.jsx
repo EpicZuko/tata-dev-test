@@ -7,10 +7,12 @@ import star from "../../assets/icons/ic_star.svg";
 import user from "../../assets/icons/ic_user.svg";
 import shopping from "../../assets/icons/ic_shopping-cart.svg";
 import "react-toggle/style.css";
+import HeaderList from "./HeaderList";
 
 const HeaderStyled = styled.header`
   display: flex;
   align-items: center;
+  justify-content: center;
   background: rgba(255, 255, 255, 1);
   width: 100%;
   height: 128px;
@@ -135,43 +137,46 @@ const StyledShopping = styled.h5`
 const Header = () => {
   const [isDark, setIsDark] = useState(true);
   return (
-    <HeaderStyled>
-      <div>
-        <ImagesLogo src={logo} alt="logo" />
-      </div>
-      <StyledDivPhone>
-        <StyledH4>Звоните и заказывайте</StyledH4>
-        <StyledNumberH1>+996 508 842 444</StyledNumberH1>
-      </StyledDivPhone>
-      <StyledInputDiv>
-        <Input variant="search" placeholder="Поиск" />
-      </StyledInputDiv>
-      <StyledToggleDiv>
-        <Toggle
-          checked={isDark}
-          onChange={({ target }) => setIsDark(target.checked)}
-          icons={{ checked: "", unchecked: "" }}
-          aria-label="Dark mode toggle"
-        />
-        <StyledDivRuKg>
-          <StyledRu>Ру</StyledRu>
-          <StyledSpan>|</StyledSpan>
-          <StyledRu>Кг</StyledRu>
-        </StyledDivRuKg>
-      </StyledToggleDiv>
-      <div>
-        <ImagesStar src={star} alt="star" />
-        <StyledStar>Бонусы</StyledStar>
-      </div>
-      <div>
-        <ImagesUser src={user} alt="user" />
-        <StyledUser>Войти</StyledUser>
-      </div>
-      <div>
-        <ImagesStar src={shopping} alt="shopping" />
-        <StyledShopping>Корзина</StyledShopping>
-      </div>
-    </HeaderStyled>
+    <>
+      <HeaderStyled>
+        <div>
+          <ImagesLogo src={logo} alt="logo" />
+        </div>
+        <StyledDivPhone>
+          <StyledH4>Звоните и заказывайте</StyledH4>
+          <StyledNumberH1>+996 508 842 444</StyledNumberH1>
+        </StyledDivPhone>
+        <StyledInputDiv>
+          <Input variant="search" placeholder="Поиск" />
+        </StyledInputDiv>
+        <StyledToggleDiv>
+          <Toggle
+            checked={isDark}
+            onChange={({ target }) => setIsDark(target.checked)}
+            icons={{ checked: "", unchecked: "" }}
+            aria-label="Dark mode toggle"
+          />
+          <StyledDivRuKg>
+            <StyledRu>Ру</StyledRu>
+            <StyledSpan>|</StyledSpan>
+            <StyledRu>Кг</StyledRu>
+          </StyledDivRuKg>
+        </StyledToggleDiv>
+        <div>
+          <ImagesStar src={star} alt="star" />
+          <StyledStar>Бонусы</StyledStar>
+        </div>
+        <div>
+          <ImagesUser src={user} alt="user" />
+          <StyledUser>Войти</StyledUser>
+        </div>
+        <div>
+          <ImagesStar src={shopping} alt="shopping" />
+          <StyledShopping>Корзина</StyledShopping>
+        </div>
+      </HeaderStyled>
+      <HeaderList />
+    </>
   );
 };
 

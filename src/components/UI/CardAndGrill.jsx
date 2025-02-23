@@ -90,6 +90,10 @@ const DIVMODAL = styled.div`
   display: flex;
   align-items: flex-start;
   text-align: left;
+  @media (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 const IMAGESCARD = styled.img`
@@ -97,6 +101,13 @@ const IMAGESCARD = styled.img`
   height: 434px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  @media (max-width: 450px) {
+    width: 414px;
+    height: 234px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    /* border-radius: 16.76px; */
+  }
 `
 const ModalH1 = styled.h1`
   font-family: Nunito Sans;
@@ -107,6 +118,10 @@ const ModalH1 = styled.h1`
   margin-left: 36px;
   margin: 36px 0px 20px 36px;
   margin-top: 36px;
+  @media (max-width: 450px) {
+    line-height: 20.64px;
+    margin-left: 20px;
+  }
 `
 const ModalP = styled.p`
   font-family: Nunito Sans;
@@ -115,6 +130,9 @@ const ModalP = styled.p`
   line-height: 22.4px;
   color: rgba(127, 127, 127, 1);
   margin: 0px 0px 20px 36px;
+  @media (max-width: 450px) {
+    margin: 0px 0px 20px 20px;
+  }
 `
 const ToggleWrapper = styled.div`
   display: flex;
@@ -126,6 +144,11 @@ const ToggleWrapper = styled.div`
   width: 401px;
   height: 56px;
   margin: 0px 0px 120px 36px;
+  @media (max-width: 450px) {
+    width: 388px;
+    height: 56px;
+    margin: 0px 0px 0px 20px;
+  }
 `
 
 const ToggleLabel = styled.label`
@@ -148,6 +171,9 @@ const ToggleLabel = styled.label`
 `
 const ButtonsDiv = styled.div`
   margin: 0px 0px 0px 36px;
+  @media (max-width: 450px) {
+    margin: 36px 0px 0px 20px;
+  }
 `
 const ToggleInput = styled.input`
   display: none;
@@ -158,6 +184,10 @@ const StyledH1 = styled.h1`
   font-size: 20px;
   line-height: 28px;
   margin: 0px 0px 20px 0px;
+  @media (max-width: 450px) {
+    margin: 0px 0px 200px 0px;
+    font-size: 24px;
+  }
 `
 const CardAndGrill = ({ dataArray, onClick }) => {
   const [isOpen, setIsOpen] = useState(false)

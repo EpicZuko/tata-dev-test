@@ -100,9 +100,13 @@ const ModalOverlay = styled.div`
     width: 400px !important;
     height: 600px !important;
   }
-  & div div div div div div div {
-    background: green !important;
+  @media (max-width: 450px) {
+    padding-top: 40px;
+    top: 0;
+    left: 0px;
+    align-items: normal;
   }
+
 `;
 
 const ModalContent = styled.div`
@@ -134,9 +138,9 @@ const StoriesCardSlick = ({ dataArrayCard }) => {
 
   const handleStoryClick = (index) => {
     const formattedStories = dataArrayCard.map((item) => ({
-      url: item.images,
+      url: item?.images,
       header: {
-        heading: item.name,
+        heading: item?.name,
       },
     }));
 
@@ -169,7 +173,7 @@ const StoriesCardSlick = ({ dataArrayCard }) => {
         <Carousel responsive={storiesCard}>
           {dataArrayCard?.map((element, index) => (
             <StoriesContainer
-              key={element.id}
+              key={element?.id}
               onClick={() => handleStoryClick(index)}
             >
               <IMAGES src={element.images} alt="images" />

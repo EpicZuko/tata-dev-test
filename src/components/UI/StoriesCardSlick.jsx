@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Stories from "react-insta-stories";
 import Carousel from "react-multi-carousel";
 import styled from "styled-components";
 import "react-multi-carousel/lib/styles.css";
@@ -83,14 +84,94 @@ const TEXTH1 = styled.h1`
     font-size: 12.02px;
   }
 `;
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+  img {
+    object-fit: cover;
+    width: 400px !important;
+    height: 600px !important;
+  }
+  & div div div div div div div {
+    background: green !important;
+  }
+`;
 
-const StoriesCardSlick = ({ dataArrayCard, onClick }) => {
+const ModalContent = styled.div`
+  background: white;
+  width: 400px;
+  height: 606px;
+  border-radius: 42.88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+`;
+const StoriesCardSlick = ({ dataArrayCard }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [stories, setStories] = useState([]);
+
+  const handleStoryClick = (index) => {
+    const formattedStories = dataArrayCard.map((item) => ({
+      url: item.images,
+      header: {
+        heading: item.name,
+      },
+    }));
+
+    const reorderedStories = [
+      ...formattedStories.slice(index),
+      ...formattedStories.slice(0, index),
+    ];
+
+    setStories(reorderedStories);
+    setIsOpen(true);
+  };
+
   return (
     <>
+      {isOpen && (
+        <ModalOverlay>
+          <ModalContent>
+            <CloseButton onClick={() => setIsOpen(false)}>&times;</CloseButton>
+            <Stories
+              stories={stories}
+              defaultInterval={1500}
+              width="100%"
+              height="100%"
+              loop
+            />
+          </ModalContent>
+        </ModalOverlay>
+      )}
       <Wrapper>
         <Carousel responsive={storiesCard}>
-          {dataArrayCard?.map((element) => (
-            <StoriesContainer key={element.id} onClick={onClick}>
+          {dataArrayCard?.map((element, index) => (
+            <StoriesContainer
+              key={element.id}
+              onClick={() => handleStoryClick(index)}
+            >
               <IMAGES src={element.images} alt="images" />
               <TEXTH1>{element.name}</TEXTH1>
             </StoriesContainer>

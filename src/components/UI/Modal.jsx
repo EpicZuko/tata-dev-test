@@ -18,15 +18,26 @@ const ModalWrapper = styled.div`
 
 const ModalContent = styled.div`
   background: white;
-  /* padding: 20px; */
   border-radius: 20px;
   width: ${({ width }) => width || '90%'};
   max-width: 1046px;
   height: ${({ height }) => height || 'auto'};
   max-height: 90vh;
-  /* overflow: auto; */
   position: relative;
   text-align: center;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    border-radius: 0;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+    height: 100%; 
+    max-width: none; 
+    border-radius: 0;
+  }
 `
 
 const CloseButton = styled.button`

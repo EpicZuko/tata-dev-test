@@ -3,17 +3,32 @@ import styled from "styled-components";
 import Button from "../UI/Button";
 import basketimages from "../../assets/icons/image (2).svg";
 
-const BasketDiv = styled.div`
-  display: flex;
+const BasketContainer = styled.div`
   background-color: rgba(247, 247, 247, 1);
   width: 620px;
-  height: 168px;
+  height: auto;
+  @media (max-width: 450px) {
+    width: 428px;
+  }
+`;
+const BasketDiv = styled.div`
+  display: flex;
+  @media (max-width: 450px) {
+    width: 428px;
+    height: 222px;
+    display: flex;
+  }
 `;
 const Images = styled.img`
-  width: 200;
-  height: 120;
+  width: 200px;
+  height: 120px;
   border-radius: 19.17px;
   padding: 24px 24px 0px 24px;
+  @media (max-width: 450px) {
+    width: 186px;
+    height: 111px;
+    border-radius: 17.82px;
+  }
 `;
 const StyledNameH1 = styled.h1`
   font-family: Nunito Sans;
@@ -37,12 +52,25 @@ const StyledPrice = styled.h2`
 `;
 const StyledPriceContainer = styled.div`
   display: flex;
-  padding: 45px 0px 0px 0px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px 20px 110px;
+  margin-top: -40px;
   gap: 141px;
+  @media (max-width: 450px) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    padding: 0px 0px 10px 0px;
+    margin-top: -100px;
+  }
 `;
 const StyledButtonContainer = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: 450px) {
+    margin-left: -30px;
+  }
 `;
 const SpanDiscount = styled.span`
   font-family: Nunito Sans;
@@ -53,7 +81,7 @@ const SpanDiscount = styled.span`
 `;
 const CardBaskets = ({ name, kg, price, count, onClickPlus, onClickMinus }) => {
   return (
-    <div>
+    <BasketContainer>
       <BasketDiv>
         <div>
           <Images src={basketimages} alt="" />
@@ -63,17 +91,17 @@ const CardBaskets = ({ name, kg, price, count, onClickPlus, onClickMinus }) => {
             <StyledNameH1>{name}</StyledNameH1>
             <StyledSpan>{kg} кг</StyledSpan>
           </div>
-          <StyledPriceContainer>
-            <StyledPrice>{price} сом</StyledPrice>
-            <StyledButtonContainer>
-              <Button variant="minus" onClick={onClickMinus} />
-              <SpanDiscount>{count}</SpanDiscount>
-              <Button variant="plus" onClick={onClickPlus} />
-            </StyledButtonContainer>
-          </StyledPriceContainer>
         </div>
       </BasketDiv>
-    </div>
+      <StyledPriceContainer>
+        <StyledPrice>{price} сом</StyledPrice>
+        <StyledButtonContainer>
+          <Button variant="minus" onClick={onClickMinus} />
+          <SpanDiscount>{count}</SpanDiscount>
+          <Button variant="plus" onClick={onClickPlus} />
+        </StyledButtonContainer>
+      </StyledPriceContainer>
+    </BasketContainer>
   );
 };
 

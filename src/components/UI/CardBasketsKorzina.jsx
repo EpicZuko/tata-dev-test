@@ -18,7 +18,13 @@ const CartWrapper = styled.div`
   z-index: 100;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
+
 const CartContent = styled.div`
   flex: 1;
   overflow-y: auto;
@@ -26,6 +32,9 @@ const CartContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media (max-width: 768px) {
+    max-height: calc(100vh - 150px);
+  }
 `;
 
 const Overlay = styled.div`
@@ -67,6 +76,11 @@ const BasketH1 = styled.h1`
   font-size: 36px;
   line-height: 30.96px;
   padding: 0px 0px 28px 40px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    padding: 0px 0px 20px 20px;
+  }
 `;
 
 const BusketOrder = styled.div`
@@ -79,6 +93,10 @@ const BusketOrder = styled.div`
   bottom: 0;
   z-index: 10;
   color: rgba(54, 54, 54, 1);
+
+  @media (max-width: 768px) {
+    padding: 15px 20px;
+  }
 `;
 
 const OrderDetails = styled.div`
@@ -91,37 +109,47 @@ const OrderRow = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 18px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
+
 const StyledGoods = styled.h3`
   font-family: Nunito Sans;
   font-weight: 600;
   font-size: 16px;
   line-height: 22.4px;
 `;
+
 const StyledPrice = styled.span`
   font-family: Nunito Sans;
   font-weight: 600;
   font-size: 16px;
   line-height: 22.4px;
 `;
+
 const StyledPoints = styled.span`
   font-family: Nunito Sans;
   font-weight: 600;
   font-size: 16px;
   line-height: 22.4px;
 `;
+
 const StyledSixty = styled.span`
   font-family: Nunito Sans;
   font-weight: 600;
   font-size: 16px;
   line-height: 22.4px;
 `;
+
 const StyledDelivery = styled.h3`
   font-family: Nunito Sans;
   font-weight: 600;
   font-size: 16px;
   line-height: 22.4px;
 `;
+
 const StyledForFree = styled.span`
   font-family: Nunito Sans;
   font-weight: 600;
@@ -129,12 +157,14 @@ const StyledForFree = styled.span`
   line-height: 22.4px;
   color: rgba(54, 54, 54, 1);
 `;
+
 const StyledOrderAmount = styled.h2`
   font-family: Nunito Sans;
   font-weight: 700;
   font-size: 24px;
   line-height: 33.6px;
 `;
+
 const StyledOrderAmountPrice = styled.span`
   font-family: Nunito Sans;
   font-weight: 700;
@@ -142,6 +172,7 @@ const StyledOrderAmountPrice = styled.span`
   line-height: 33.6px;
   color: rgba(54, 54, 54, 1);
 `;
+
 const InputPromotional = styled.input`
   border: none;
   background: transparent;
@@ -151,12 +182,14 @@ const InputPromotional = styled.input`
   line-height: 22.4px;
   outline: none;
 `;
+
 const ButtonDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
 `;
+
 const EmptyCart = styled.div`
   display: flex;
   flex-direction: column;
@@ -164,10 +197,12 @@ const EmptyCart = styled.div`
   justify-content: center;
   height: 100%;
   text-align: center;
+
   img {
     max-width: 250px;
     margin-bottom: 20px;
   }
+
   h2 {
     margin-bottom: 10px;
     font-family: Nunito Sans;
@@ -176,6 +211,7 @@ const EmptyCart = styled.div`
     line-height: 33.6px;
     text-align: center;
   }
+
   p {
     color: #666;
     font-family: Nunito Sans;
@@ -186,10 +222,16 @@ const EmptyCart = styled.div`
     width: 330px;
   }
 `;
+
 const CartBasketsKorzonina = () => {
   const [open, setOpen] = useState(false);
 
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState([
+    { id: 1, name: "Козу-гриль", kg: "7-8", count: 1, price: 8500 },
+    { id: 2, name: "Козу-гриль", kg: "7-8", count: 1, price: 9500 },
+    { id: 3, name: "Козу-гриль", kg: "7-8", count: 1, price: 1500 },
+    { id: 4, name: "Козу-гриль", kg: "7-8", count: 1, price: 3500 },
+  ]);
 
   const handleIncrease = (id) => {
     setCartItems((prev) =>
@@ -289,12 +331,9 @@ const CartBasketsKorzonina = () => {
           </>
         ) : (
           <EmptyCart>
-            <img src={busketimages} alt="images" />
-            <h2>Ваша корзина пуста</h2>
-            <p>
-              Добавьте товары, а мы их доставим. Минимальная сумма заказа — 1000
-              сом.
-            </p>
+            <img src={busketimages} alt="empty cart" />
+            <h2>Корзина пуста</h2>
+            <p>Добавьте товары в корзину, чтобы оформить заказ.</p>
           </EmptyCart>
         )}
       </CartWrapper>

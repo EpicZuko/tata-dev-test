@@ -8,6 +8,8 @@ import user from "../../assets/icons/ic_user.svg";
 import shopping from "../../assets/icons/ic_shopping-cart.svg";
 import "react-toggle/style.css";
 import HeaderList from "./HeaderList";
+import { useDispatch } from "react-redux";
+import { toggleCart } from "../../services/slices/CartSlice";
 
 const HeaderStyled = styled.header`
   display: flex;
@@ -136,6 +138,7 @@ const StyledShopping = styled.h5`
 
 const Header = () => {
   const [isDark, setIsDark] = useState(true);
+  const dispatch = useDispatch();
   return (
     <>
       <HeaderStyled>
@@ -170,7 +173,7 @@ const Header = () => {
           <ImagesUser src={user} alt="user" />
           <StyledUser>Войти</StyledUser>
         </div>
-        <div>
+        <div onClick={() => dispatch(toggleCart())}>
           <ImagesStar src={shopping} alt="shopping" />
           <StyledShopping>Корзина</StyledShopping>
         </div>

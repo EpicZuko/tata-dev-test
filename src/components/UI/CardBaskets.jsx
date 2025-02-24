@@ -79,12 +79,12 @@ const SpanDiscount = styled.span`
   line-height: 28px;
   padding: 0px 16px 0px 16px;
 `;
-const CardBaskets = ({ name, kg, price, count, onClickPlus, onClickMinus }) => {
+const CardBaskets = ({ name, kg, price, count,images, onClickPlus, onClickMinus }) => {
   return (
     <BasketContainer>
       <BasketDiv>
         <div>
-          <Images src={basketimages} alt="" />
+          <Images src={images} alt="" />
         </div>
         <div>
           <div>

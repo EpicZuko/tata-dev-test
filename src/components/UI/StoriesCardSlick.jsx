@@ -94,7 +94,7 @@ const ModalOverlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1100;
+  z-index: 110000;
   img {
     object-fit: cover;
     width: 400px !important;

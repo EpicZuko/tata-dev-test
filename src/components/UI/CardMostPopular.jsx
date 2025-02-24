@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   display: block;
   align-items: center;
   justify-content: center;
-  padding: 0px 0px 100px 0px;
+  padding: 100px 0px 100px 0px;
   @media (max-width: 450px) {
     padding: 0px 10px 0px 10px;
     margin-bottom: 20px;

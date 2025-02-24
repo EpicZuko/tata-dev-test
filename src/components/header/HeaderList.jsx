@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Button from "../UI/Button";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleCart } from "../../services/slices/CartSlice";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -12,7 +14,7 @@ const StyledDiv = styled.div`
   position: fixed;
   top: ${(props) => (props.isVisible ? "0" : "122px")};
   left: 0;
-  z-index: 999;
+  z-index: 10040;
   transition: top 0.3s ease-in-out;
   padding: 0 20px;
 
@@ -82,7 +84,10 @@ const List = styled.li`
 
 const HeaderList = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const cartItems = useSelector((state) => state.cart.items);
+  const totalItems = cartItems.reduce((total, item) => total + item.count, 0);
 
+  const dispatch = useDispatch();
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
@@ -111,7 +116,9 @@ const HeaderList = () => {
         ))}
       </StyledUl>
       <StyledButton $visible={isScrolled}>
-        <Button variant="Корзина">Корзина</Button>
+        <Button variant="Корзина" onClick={() => dispatch(toggleCart())}>
+          Корзина {totalItems > 0 ? `${totalItems}` : ""}
+        </Button>
       </StyledButton>
     </StyledDiv>
   );

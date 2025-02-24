@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import Modal from "./Modal";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../services/slices/CartSlice";
 
 const CardAndGrillStyled = styled.div`
   display: flex;
@@ -9,7 +11,7 @@ const CardAndGrillStyled = styled.div`
   align-items: center;
   justify-content: center;
   gap: 24px;
-  margin: 0px 0px 100px 0px;
+  margin: 0px 0px -200px 0px;
   @media (max-width: 450px) {
     margin: 0px 0px 24px 0px;
   }
@@ -193,63 +195,80 @@ const StyledH1 = styled.h1`
     font-size: 24px;
   }
 `;
-const CardSnacks = ({ dataArray, onClick }) => {
+const StyledSnacksH1 = styled.h1`
+  font-family: Nunito Sans;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 34.4px;
+  padding: 0px 0px 48px 100px;
+`;
+const CardSnacks = ({ dataArray }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState("13-14 кг");
+  const [selected, setSelected] = useState("13-14");
   const [selectedCard, setSelectedCard] = useState(null);
+  const dispatch = useDispatch();
+
   const handleCardClick = (card) => {
     setSelectedCard(card);
     setIsOpen(true);
   };
+
+  const handleAddToCart = (item) => {
+    const itemWithWeight = { ...item, selectedWeight: selected };
+
+    dispatch(addToCart(itemWithWeight));
+    setIsOpen(false);
+  };
+
   return (
     <>
+      <StyledSnacksH1>Закуски</StyledSnacksH1>
       {isOpen && (
-        <div>
-          <Modal
-            isOpen={isOpen}
-            onClose={() => setIsOpen(false)}
-            width="1046px"
-            height="434px"
-          >
-            <DIVMODAL>
-              <div>
-                <IMAGESCARD src={selectedCard?.images} alt="images" />
-              </div>
-              <div>
-                <ModalH1>{selectedCard?.name}</ModalH1>
-                <ModalP>{selectedCard?.desicription}</ModalP>
-                <ToggleWrapper>
-                  {["7-8 кг", "13-14 кг", "19-20 кг"].map((weight) => (
-                    <div key={weight}>
-                      <ToggleInput
-                        type="radio"
-                        id={weight}
-                        name="weight"
-                        value={weight}
-                        checked={selected === weight}
-                        onChange={() => setSelected(weight)}
-                      />
-                      <ToggleLabel
-                        htmlFor={weight}
-                        active={selected === weight}
-                      >
-                        {weight}
-                      </ToggleLabel>
-                    </div>
-                  ))}
-                </ToggleWrapper>
+        <Modal
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+          width="1046px"
+          height="434px"
+        >
+          <DIVMODAL>
+            <div>
+              <IMAGESCARD src={selectedCard?.images} alt="images" />
+            </div>
+            <div>
+              <ModalH1>{selectedCard?.name}</ModalH1>
+              <ModalP>{selectedCard?.desicription}</ModalP>
+              <ToggleWrapper>
+                {["7-8", "13-14", "19-20"].map((weight) => (
+                  <div key={weight}>
+                    <ToggleInput
+                      type="radio"
+                      id={weight}
+                      name="weight"
+                      value={weight}
+                      checked={selected === weight}
+                      onChange={() => setSelected(weight)}
+                    />
+                    <ToggleLabel htmlFor={weight} active={selected === weight}>
+                      {weight} кг
+                    </ToggleLabel>
+                  </div>
+                ))}
+              </ToggleWrapper>
 
-                <ButtonsDiv>
-                  <StyledH1>{selectedCard?.price} сом</StyledH1>
-                  <Button variant="Добавить в корзину">
-                    Добавить в корзину
-                  </Button>
-                </ButtonsDiv>
-              </div>
-            </DIVMODAL>
-          </Modal>
-        </div>
+              <ButtonsDiv>
+                <StyledH1>{selectedCard?.price} сом</StyledH1>
+                <Button
+                  variant="Добавить в корзину"
+                  onClick={() => handleAddToCart(selectedCard)}
+                >
+                  Добавить в корзину
+                </Button>
+              </ButtonsDiv>
+            </div>
+          </DIVMODAL>
+        </Modal>
       )}
+
       <CardAndGrillStyled>
         {dataArray?.map((element) => (
           <PRODUCTCARD key={element?.id}>
@@ -265,7 +284,10 @@ const CardSnacks = ({ dataArray, onClick }) => {
                 <SPANTEXT>от</SPANTEXT> {element?.price} сом
               </PRICE>
               <BUTTONDIV>
-                <Button onClick={onClick} variant="добавить корзины" />
+                <Button
+                  onClick={() => handleAddToCart(element)}
+                  variant="добавить корзины"
+                />
               </BUTTONDIV>
             </PRICEANDBUTTONCONTAINER>
           </PRODUCTCARD>

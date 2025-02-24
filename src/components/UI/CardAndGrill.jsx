@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../services/slices/CartSlice";
 import styled from "styled-components";
 import Button from "./Button";
 import Modal from "./Modal";
@@ -9,7 +11,7 @@ const CardAndGrillStyled = styled.div`
   align-items: center;
   justify-content: center;
   gap: 24px;
-  margin: 100px 0px 100px 0px;
+  margin: 0px 0px 100px 0px;
   @media (max-width: 450px) {
     margin: 24px 0px 24px 0px;
   }
@@ -193,11 +195,23 @@ const StyledH1 = styled.h1`
     font-size: 24px;
   }
 `;
+const StyledGrillH1 = styled.h1`
+  font-family: Nunito Sans;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 34.4px;
+  padding: 0px 0px 48px 100px;
+`;
 const CardAndGrill = ({ dataArray, onClick }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState("13-14 кг");
+  const [selected, setSelected] = useState("13-14");
   const [selectedCard, setSelectedCard] = useState(null);
+  const dispatch = useDispatch();
+  const handleAddToCart = (item) => {
+    const itemWithWeight = { ...item, selectedWeight: selected };
 
+    dispatch(addToCart(itemWithWeight));
+  };
   const handleCardClick = (card) => {
     setSelectedCard(card);
     setIsOpen(true);
@@ -205,6 +219,7 @@ const CardAndGrill = ({ dataArray, onClick }) => {
 
   return (
     <>
+      <StyledGrillH1>Гриль</StyledGrillH1>
       <MODALCONT>
         <Modal
           isOpen={isOpen}
@@ -221,7 +236,7 @@ const CardAndGrill = ({ dataArray, onClick }) => {
                 <ModalH1>{selectedCard?.name}</ModalH1>
                 <ModalP>{selectedCard?.desicription}</ModalP>
                 <ToggleWrapper>
-                  {["7-8 кг", "13-14 кг", "19-20 кг"].map((weight) => (
+                  {["7-8", "13-14", "19-20"].map((weight) => (
                     <div key={weight}>
                       <ToggleInput
                         type="radio"
@@ -235,7 +250,7 @@ const CardAndGrill = ({ dataArray, onClick }) => {
                         htmlFor={weight}
                         active={selected === weight}
                       >
-                        {weight}
+                        {weight} кг
                       </ToggleLabel>
                     </div>
                   ))}
@@ -243,7 +258,10 @@ const CardAndGrill = ({ dataArray, onClick }) => {
 
                 <ButtonsDiv>
                   <StyledH1>{selectedCard?.price} сом</StyledH1>
-                  <Button variant="Добавить в корзину">
+                  <Button
+                    variant="Добавить в корзину"
+                    onClick={() => handleAddToCart(selectedCard)}
+                  >
                     Добавить в корзину
                   </Button>
                 </ButtonsDiv>
@@ -269,7 +287,10 @@ const CardAndGrill = ({ dataArray, onClick }) => {
             <PRICEANDBUTTONCONTAINER price={element.discount}>
               <PRICE>от {element?.price} сом</PRICE>
               <div>
-                <Button onClick={onClick} variant="добавить корзины" />
+                <Button
+                  onClick={() => handleAddToCart(element)}
+                  variant="добавить корзины"
+                />
               </div>
             </PRICEANDBUTTONCONTAINER>
           </PRODUCTCARD>

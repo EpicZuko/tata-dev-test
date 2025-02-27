@@ -107,8 +107,7 @@ const ButtonStyled = styled.button`
   cursor: pointer;
 `;
 
-const FormModal = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const FormModal = ({isOpen,setIsOpen}) => {
   const [selected, setSelected] = useState("Доставка");
   const [showAddress, setShowAddress] = useState(false); 
   const [isEditSelected, setIsEditSelected] = useState(false);
@@ -128,7 +127,6 @@ const FormModal = () => {
   };
   return (
     <div>
-      <button onClick={() => setIsOpen(true)}>Открыть модалку</button>
       {isOpen && (
         <Modal
           isOpen={isOpen}

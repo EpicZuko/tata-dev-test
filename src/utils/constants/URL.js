@@ -1,4 +1,3 @@
-import imagesr from "../../assets/icons/pizza.svg";
 
 export const cardAds = {
   superLargeDesktop: {
@@ -76,161 +75,128 @@ export const arrayStories = [
   {
     id: 555,
     images:
-      "https://static-cse.canva.com/blob/847132/paulskorupskas7KLaxLbSXAunsplash2.jpg",
-    name: "Название сториз",
+      "https://optim.tildacdn.pro/tild6365-6338-4436-b738-323764646336/-/format/webp/Bar_1.jpg",
+    name: "Козу-гриль",
   },
   {
     id: 221,
     images:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCUJ-GVxj9ccx2tR1zUe1nJDRjtsDjAlYANA&s",
-    name: "Название сториз",
+      "https://img.joomcdn.net/46d42c42844ef11e9c1dc84e895b851bc3890e37_original.jpeg",
+    name: "Индюк-гриль",
   },
   {
     id: 34,
     images:
-      "https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-    name: "Название сториз",
+      "https://dostavka.sadko-msk.ru/image/cache/catalog/5N7A0743-500x500.jpg",
+    name: "Рыба-гриль (форель)",
   },
   {
     id: 223,
     images:
-      "https://static.vecteezy.com/vite/assets/photo-masthead-375-BoK_p8LG.webp",
-    name: "Название сториз",
+      "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_66cc2ec97bd3135f79d332ee_66cc308ad07f462127604a48/scale_1200",
+    name: "Таш кордо",
   },
   {
     id: 7,
     images:
-      "https://cdn.pixabay.com/photo/2023/12/06/21/07/photo-8434386_640.jpg",
-    name: "Название сториз",
+      "https://lh6.googleusercontent.com/proxy/I0t-8X7z7CNSmjjf-JfihntUY7qrU9N5L6NuqGQ5IFWkX2RLlH0UCvTvOdMKLTlHp8Vna1jkkFT4lV3GF7carMYPs6K0LrlRW2K2uJQ3vUEhhWjz-N5cT4LRJbQA_GFN3Zzddak8qUCt0xURkczi4g",
+    name: "Кабырга гриль",
   },
   {
     id: 6,
     images:
-      "https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg",
-    name: "Название сториз",
+      "https://img.freepik.com/premium-photo/trout-grill-charcoal-fried-fish-trout-coals-trek-food_548821-24300.jpg",
+    name: "Рыба-гриль (форель)",
   },
   {
     id: 5,
-    images:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDcXvMnb2wGYm-Sx41RZ1ncxwIqzzX4PQxMQ&s",
-    name: "Название сториз",
+    images: "https://www.kozu.kg/images/galer/1.jpg",
+    name: "Таш кордо",
   },
 ];
 export const dataArrawSnacks = [
   {
     id: 1,
     images:
-      "https://play-lh.googleusercontent.com/TKCAGCj_62Gt9F-tFlB5waoMrtfItS4Mg2Cz7Xav8ZRJvpRFGKocr0sb5CpgARbEbgc",
-    name: "Козу-гриль",
-    desicription: "Чучук, курдюк, говяжмий язык, быжи, томлёная говядина",
-    price: 81100,
-  },
-  {
-    id: 2,
-    images:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvFBa3G11OUBYADP7ouSBgwiiRzSYorF4dfg&s",
-    name: "Козу-гриль",
-    desicription: "Чучук, курдюк, говяжмий язык, быжи, томлёная говядина",
-    price: 82200,
-  },
-  {
-    id: 3,
-    images:
-      "https://media.wired.com/photos/64fbb045ce986fc4eb0e5520/16:9/w_2400,h_1350,c_limit/How-to-Take-Back-Control-of-Your-Photo-and-Video-Storage-Gear-GettyImages-696155135.jpg",
-    name: "Козу-гриль",
-    desicription: "Чучук, курдюк, говяжмий язык, быжи, томлёная говядина",
-    price: 89990,
-  },
-  {
-    id: 4,
-    images:
-      "https://iso.500px.com/wp-content/uploads/2019/07/stock-photo-maderas-312058103.jpg",
-    name: "Козу-гриль",
-    desicription: "Чучук, курдюк, говяжмий язык, быжи, томлёная говядина",
-    price: 8900,
-  },
-  {
-    id: 5,
-    images:
-      "https://static.vecteezy.com/system/resources/thumbnails/023/329/714/small/heart-tree-love-for-nature-red-landscape-at-sunset-generativ-ai-photo.jpg",
-    name: "Козу-гриль",
-    desicription: "Чучук, курдюк, говяжмий язык, быжи, томлёная говядина",
-    price: 12300,
-  },
-  {
-    id: 6,
-    images:
-      "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
-    name: "Козу-гриль",
-    desicription: "Чучук, курдюк, говяжмий язык, быжи, томлёная говядина",
-    price: 3400,
-  },
-  {
-    id: 7,
-    images:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAmccat3zT3nYHGdMG6Jn6626W_Q_nEA_dYA&s",
-    name: "Козу-гриль",
+      "https://alasha.kz/wp-content/uploads/2019/10/%D0%90%D1%81%D1%81%D0%BE%D1%80%D1%82%D0%B8-%D0%BC%D1%8F%D1%81%D0%BD%D0%BE%D0%B5-min.jpg",
+    name: "Мясное ассорти",
     desicription: "Чучук, курдюк, говяжмий язык, быжи, томлёная говядина",
     price: 1200,
   },
   {
-    id: 8,
+    id: 2,
     images:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAmccat3zT3nYHGdMG6Jn6626W_Q_nEA_dYA&s",
-    name: "Козу-гриль",
-    desicription: "Время приготовления: 5 часов",
+      "https://sun9-65.userapi.com/impg/inJ_KheyGHuMEif1KKDN_jlWMAnlH_VNhHah4Q/lvVuT5cdG6Y.jpg?size=604x453&quality=95&sign=aa980371a37d895040bdd28e5fdf9b5d&type=album",
+    name: "Куриный сет",
+    desicription: "Чучук, курдюк, говяжмий язык, быжи, томлёная говядина",
+    price: 8200,
+  },
+  {
+    id: 3,
+    images:
+      "https://rocosushi.com/web/uploads/products/c72f0acca6ef38003cf1-%D0%A1%D0%B5%D1%82-1%C2%A0.png",
+    name: "Суши сет",
+    desicription: "Чучук, курдюк, говяжмий язык, быжи, томлёная говядина",
+    price: 8090,
+  },
+  {
+    id: 4,
+    images:
+      "https://eda.yandex.ru/images/3454897/b88efc305f93b1bd22927bd84c98fa74-800x800.jpg",
+    name: "Кавказская нарезка",
+    desicription: "Чучук, курдюк, говяжмий язык, быжи, томлёная говядина",
     price: 8900,
-    discount: 2,
   },
 ];
 export const dataArrawwGrill = [
   {
     id: 1,
     images:
-      "https://play-lh.googleusercontent.com/TKCAGCj_62Gt9F-tFlB5waoMrtfItS4Mg2Cz7Xav8ZRJvpRFGKocr0sb5CpgARbEbgc",
+      "https://img5.lalafo.com/i/posters/api/4f/a0/5a/82909316e293104be5b2e8f75f.jpeg",
     name: "Козу-гриль",
-    desicription: "Время приготовления: 5 часов zuko",
-    price: 81100,
+    desicription: "Время приготовления: 5 часов",
+    price: 8500,
     kg: "7-8",
   },
   {
     id: 2,
-    images: "https://photo-works.net/images/europe-landscape-photo-edited.jpg",
+    images:
+      "https://static.insales-cdn.com/files/1/2335/3107103/original/roasted-orange-rosemary-butter-turkey.jpg",
     name: "Индюк-гриль",
     desicription: "Время приготовления: 5 часов",
-    price: 82200,
+    price: 3000,
     kg: "7-8",
   },
   {
     id: 3,
     images:
-      "https://images.pexels.com/photos/516927/pexels-photo-516927.jpeg?cs=srgb&dl=pexels-pripicart-516927.jpg&fm=jpg",
+      "https://lh6.googleusercontent.com/proxy/6YCI8QPKfgRf8d5gvsey91N2ind1yRKTxPUDXcu-BmK-lfm42w9LrWfXFpXi3Amo7ZqN7dYEuViXxVkxCyPjdhbiS__Z1Mg98v9trZyXbE8kH4lykEH23HNJNW3Qn49BNumdVwfUlkM",
     name: "Рыба-гриль (форель)",
     desicription: "Время приготовления: 5 часов",
-    price: 89990,
+    price: 1200,
   },
   {
     id: 4,
-    images: "https://photoscissors.com/images/samples/1-before.jpg",
+    images:
+      "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_66cc2ec97bd3135f79d332ee_66cc308ad07f462127604a48/scale_1200",
     name: "Таш кордо",
     desicription: "Время приготовления: 5 часов",
-    price: 8900,
+    price: 12500,
   },
   {
     id: 5,
     images:
-      "https://www.guillenphoto.com/data/blog/2022/015-21-conseils-pour-ameliorer-vos-photos-1/images/northern-lapwing-chick-in-la-dombes-in-france.jpg",
+      "https://lh6.googleusercontent.com/proxy/MiKfp5yn5GasRPvTFEvfrPKxaxNJKzZEuz02o-lOxd-9uIHqg8okKCQr-dCE7PqV0-H4JFFcZWKTazWcfhLTd7-Wj2AjXUke2oqJgw",
     name: "Кабырга гриль",
     desicription: "Время приготовления: 5 часов",
-    price: 12300,
+    price: 9700,
   },
   {
     id: 6,
-    images:
-      "https://media.istockphoto.com/id/610259354/photo/young-woman-using-dslr-camera.jpg?s=612x612&w=0&k=20&c=gjAR4JiqA8lkGQzssSrXxo3yl-cwr5j7Hy47cy-10c4=",
+    images: "https://img.povar.ru/mobile/aa/84/7c/8a/forel_na_grile-323058.png",
     name: "Рыба-гриль (форель)",
     desicription: "Время приготовления: 5 часов",
-    price: 3400,
+    price: 1200,
   },
   {
     id: 7,
@@ -242,11 +208,10 @@ export const dataArrawwGrill = [
   },
   {
     id: 8,
-    images:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvFBa3G11OUBYADP7ouSBgwiiRzSYorF4dfg&s",
+    images: "https://tashkordo.kg/images/foto/patr.jpg",
     name: "Таш кордо",
     desicription: "Время приготовления: 5 часов",
-    price: 8900,
+    price: 12500,
     discount: 2,
   },
 ];
@@ -254,21 +219,20 @@ export const arrayPopular = [
   {
     id: 1,
     images:
-      "https://www.simplyrecipes.com/thmb/KE6iMblr3R2Db6oE8HdyVsFSj2A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-1024x682-583b275444104ef189d693a64df625da.jpg",
+      "https://img.freepik.com/free-photo/slice-cut-from-classic-pepperoni-pizza-with-green-pepper-rolls_114579-1963.jpg?t=st=1740502621~exp=1740506221~hmac=6e222454bd84ca40dd2ae1e3ce789d5975a667b886e93d9aef91fd22e1977d0a&w=1380",
     name: "Пепперони",
     price: 600,
   },
   {
     id: 2,
     images:
-      "https://www.simplyrecipes.com/thmb/KE6iMblr3R2Db6oE8HdyVsFSj2A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-1024x682-583b275444104ef189d693a64df625da.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7JbLGRzPnyBsX4MSyTXGEVadaDC9CEqZ-Ng&s",
     name: "Лепёшки",
     price: 1000,
   },
   {
     id: 3,
-    images:
-      "https://www.simplyrecipes.com/thmb/KE6iMblr3R2Db6oE8HdyVsFSj2A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-1024x682-583b275444104ef189d693a64df625da.jpg",
+    images: "https://www.kozu.kg/images/koz-grill-m.png",
     name: "Козу-гриль",
     price: 900,
   },
@@ -277,37 +241,25 @@ export const arrayAds = [
   {
     id: 1,
     images:
-      "https://imgv3.fotor.com/images/blog-cover-image/a-shadow-of-a-boy-carrying-the-camera-with-red-sky-behind.jpg",
-    name: "Лучший гриль",
+      "https://shop.kolbasa.ru/upload/iblock/3c5/3akgrro05msumuzyfah4kjbxky7bv9gu/L2Ntcy9hbGwtaW1hZ2VzLzY1YzIxMjU3LTZhY2MtNDc1MC04Mjg5LTY1OWEzYTgyMjIyYy5qcGc.webp",
+    name: "Мясное ассорти",
   },
   {
     id: 2,
     images:
-      "https://www.shutterstock.com/image-photo/blond-hair-girl-taking-photo-260nw-2492842415.jpg",
-    name: "Лучший гриль",
+      "https://шашлычная1.бел/upload/iblock/e54/wghiyjbs0uojc29fsyr60j9y6i4ejury.jpg",
+    name: "Куриный сет",
   },
   {
     id: 3,
     images:
-      "https://images.unsplash.com/photo-1541516160071-4bb0c5af65ba?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGFraW5nJTIwcGhvdG98ZW58MHx8MHx8fDA%3D",
-    name: "Лучший гриль",
+      "https://rocosushi.com/web/uploads/products/f516ffce6129fef26f05-%D0%A1%D0%B5%D1%82-4-New.jpg",
+    name: "Суши сет",
   },
   {
     id: 4,
     images:
-      "https://cdn.pixabay.com/photo/2023/12/06/21/07/photo-8434386_640.jpg",
-    name: "Лучший гриль",
-  },
-  {
-    id: 5,
-    images:
-      "https://images.pexels.com/photos/516927/pexels-photo-516927.jpeg?cs=srgb&dl=pexels-pripicart-516927.jpg&fm=jpg",
-    name: "Лучший гриль",
-  },
-  {
-    id: 6,
-    images:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRioEI4ukddcJtBu_a_D5oMI49OLkLSBXPyNw&s",
-    name: "Лучший гриль",
+      "https://damdiland.kz/wp-content/uploads/2021/08/1d23d4f8-949c-4de4-888e-6683cf55e062.jpg",
+    name: "Кавказская нарезка",
   },
 ];

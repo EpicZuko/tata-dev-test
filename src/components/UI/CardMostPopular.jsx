@@ -61,9 +61,9 @@ const DIVMOSTPOPULAR = styled.div`
 `;
 const PopularImages = styled.img`
   width: 154px;
-  height: 149px;
+  height: 130px;
   border-radius: 30px;
-  padding-left: 10px;
+  margin-left: 40px;
   @media (max-width: 450px) {
     width: 104px;
     height: 100px;
@@ -97,6 +97,13 @@ const StyledPopularH1 = styled.h1`
   font-size: 40px;
   line-height: 34.4px;
   padding: 60px 0px 48px 100px;
+  @media (max-width: 450px) {
+    font-family: Nunito Sans;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 0%;
+    padding: 0px 0px 28px 20px;
+  }
 `;
 const CardMostPopular = ({ dataArray }) => {
   return (

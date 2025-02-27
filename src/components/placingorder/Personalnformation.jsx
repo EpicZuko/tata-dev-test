@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Input from "../UI/Input";
 import styled from "styled-components";
+import FormModal from "../formModal/FormModal";
 
 const StyledForm = styled.form`
   width: 536px;
@@ -72,8 +73,10 @@ const StyledInput = styled.div`
   }
 `;
 const Personalnformation = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
+      <FormModal isOpen={isOpen} setIsOpen={setIsOpen} />
       <StyledForm>
         <StyledPersonals>Личные данные</StyledPersonals>
         <StyledInputName>
@@ -86,7 +89,11 @@ const Personalnformation = () => {
         </StyledInputNumber>
         <StyledInput>
           <StyledLabelAddress htmlFor="">Адрес доставки</StyledLabelAddress>
-          <Input variant="selectaddress" placeholder="Выберите адрес" />
+          <Input
+            variant="selectaddress"
+            placeholder="Выберите адрес"
+            onClick={() => setIsOpen(true)}
+          />
         </StyledInput>
       </StyledForm>
     </div>

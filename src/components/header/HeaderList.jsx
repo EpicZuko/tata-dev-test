@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Button from "../UI/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleCart } from "../../services/slices/CartSlice";
+import { Link } from "react-scroll";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -62,7 +63,7 @@ const StyledUl = styled.ul`
   }
 `;
 
-const List = styled.li`
+const List = styled(Link)`
   font-family: Nunito Sans;
   font-weight: 500;
   font-size: 14px;
@@ -112,7 +113,15 @@ const HeaderList = () => {
     <StyledDiv isVisible={isScrolled}>
       <StyledUl>
         {listArray.map((element) => (
-          <List key={element.id}>{element.name}</List>
+          <List
+            key={element.id}
+            to={element.name}
+            smooth={true}
+            duration={500}
+            offset={-80}
+          >
+            {element.name}
+          </List>
         ))}
       </StyledUl>
       <StyledButton $visible={isScrolled}>

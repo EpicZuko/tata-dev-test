@@ -11,6 +11,7 @@ import CardBaskets from "../UI/CardBaskets";
 import Button from "./Button";
 import busketimages from "../../assets/icons/basketbuskets.svg";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const CartWrapper = styled.div`
   position: fixed;
@@ -231,16 +232,20 @@ const EmptyCart = styled.div`
 `;
 
 const CartBasketsKorzonina = () => {
-  const dispatch = useDispatch();
-
+  
   const cartItems = useSelector((state) => state.cart.items);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   const isCartOpen = useSelector((state) => state.cart.isCartOpen);
- console.log(cartItems)
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const totalCount = cartItems.reduce((acc, item) => acc + item.count, 0);
   const isFreeDelivery = totalPrice >= 10000;
   const deliveryPrice = isFreeDelivery ? "бесплатно" : "500 сом";
 
+  const goToOrderForm = () => {
+    navigate("/order");
+  };
   return (
     <>
       <Overlay open={isCartOpen} onClick={() => dispatch(toggleCart())} />
@@ -297,7 +302,7 @@ const CartBasketsKorzonina = () => {
                   </StyledOrderAmountPrice>
                 </OrderRow>
                 <ButtonDiv>
-                  <Button variant="К оформлению заказа">
+                  <Button variant="К оформлению заказа" onClick={goToOrderForm}>
                     К оформлению заказа
                   </Button>
                 </ButtonDiv>

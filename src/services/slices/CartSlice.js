@@ -11,15 +11,23 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
+      const { id, selectedWeight, price } = action.payload;
+
       const itemIndex = state.items.findIndex(
-        (item) => item.id === action.payload.id
+        (item) => item.id === id && item.selectedWeight === selectedWeight
       );
+
       if (itemIndex >= 0) {
         state.items[itemIndex].count += 1;
       } else {
-        state.items.push({ ...action.payload, count: 1 });
+        state.items.push({
+          ...action.payload,
+          quantity: 1,
+          count: 1,
+        });
       }
-      state.totalPrice += action.payload.price;
+
+      state.totalPrice += price;
     },
     removeFromCart: (state, action) => {
       const itemIndex = state.items.findIndex(

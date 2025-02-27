@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../UI/Button";
+import { useSelector } from "react-redux";
 
 const StyledCommentsDiv = styled.div`
   width: 536px;
@@ -59,6 +60,7 @@ const StyledCommentsButton = styled.div`
   }
 `;
 const CommentsOrder = () => {
+  const totalPrice = useSelector((state) => state.cart.totalPrice);
   return (
     <div>
       <StyledCommentsDiv>
@@ -67,7 +69,7 @@ const CommentsOrder = () => {
       </StyledCommentsDiv>
       <StyledCommentsButton>
         <Button variant="Оформить заказ за">
-          Оформить заказ за 17 000 сом
+          Оформить заказ за <span>{totalPrice}</span> сом
         </Button>
       </StyledCommentsButton>
     </div>

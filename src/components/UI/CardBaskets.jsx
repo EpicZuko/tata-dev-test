@@ -84,7 +84,7 @@ const CardBaskets = ({ name, kg, price, count,images, onClickPlus, onClickMinus 
     <BasketContainer>
       <BasketDiv>
         <div>
-          <Images src={images} alt="" />
+          <Images src={images} alt="Images" />
         </div>
         <div>
           <div>

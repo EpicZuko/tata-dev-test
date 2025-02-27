@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import Modal from "./Modal";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../services/slices/CartSlice";
+import Snackbar from "./Snackbar";
 
 const CardAndGrillStyled = styled.div`
   display: flex;
@@ -24,6 +25,10 @@ const PRODUCTCARD = styled.div`
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.01);
+  }
   @media (max-width: 428px) {
     width: 388px;
     height: 399px;
@@ -201,9 +206,24 @@ const StyledSnacksH1 = styled.h1`
   font-size: 40px;
   line-height: 34.4px;
   padding: 0px 0px 48px 100px;
+  @media (max-width: 450px) {
+    font-family: Nunito Sans;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 0%;
+    padding: 0px 0px 28px 20px;
+  }
 `;
+
+const priceMultipliers = {
+  "7-8": 1,
+  "13-14": 1.2, // Увеличение на 20%
+  "19-20": 1.5, // Увеличение на 50%
+};
+
 const CardSnacks = ({ dataArray }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [selected, setSelected] = useState("13-14");
   const [selectedCard, setSelectedCard] = useState(null);
   const dispatch = useDispatch();
@@ -213,16 +233,38 @@ const CardSnacks = ({ dataArray }) => {
     setIsOpen(true);
   };
 
+  const updatedPrice = useMemo(() => {
+    return selectedCard?.price
+      ? Math.round(selectedCard.price * priceMultipliers[selected])
+      : selectedCard?.price;
+  }, [selected, selectedCard]);
+
   const handleAddToCart = (item) => {
-    const itemWithWeight = { ...item, selectedWeight: selected };
+    if (!item) return;
+
+    const updatedPrice = Math.round(item.price * priceMultipliers[selected]);
+
+    const itemWithWeight = {
+      ...item,
+      selectedWeight: selected,
+      price: updatedPrice, // Передаем новую цену в корзину
+    };
 
     dispatch(addToCart(itemWithWeight));
+    setSnackbarOpen(true);
     setIsOpen(false);
   };
 
   return (
-    <>
+    <div id="Закуски">
+      <Snackbar
+        text={selected}
+        textName={selectedCard ? selectedCard.name : "Товар"}
+        open={snackbarOpen}
+        handleClose={() => setSnackbarOpen(false)}
+      />
       <StyledSnacksH1>Закуски</StyledSnacksH1>
+
       {isOpen && (
         <Modal
           isOpen={isOpen}
@@ -256,7 +298,7 @@ const CardSnacks = ({ dataArray }) => {
               </ToggleWrapper>
 
               <ButtonsDiv>
-                <StyledH1>{selectedCard?.price} сом</StyledH1>
+                <StyledH1>{updatedPrice} сом</StyledH1>
                 <Button
                   variant="Добавить в корзину"
                   onClick={() => handleAddToCart(selectedCard)}
@@ -293,7 +335,7 @@ const CardSnacks = ({ dataArray }) => {
           </PRODUCTCARD>
         ))}
       </CardAndGrillStyled>
-    </>
+    </div>
   );
 };
 

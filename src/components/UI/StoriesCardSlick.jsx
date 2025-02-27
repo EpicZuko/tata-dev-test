@@ -62,6 +62,7 @@ const IMAGES = styled.img`
   height: 241px;
   border-radius: 40px;
   background-color: rgba(0, 145, 66, 1);
+  background-image: cover;
   cursor: pointer;
   @media (max-width: 430px) {
     width: 101px;
@@ -106,7 +107,6 @@ const ModalOverlay = styled.div`
     left: 0px;
     align-items: normal;
   }
-
 `;
 
 const ModalContent = styled.div`

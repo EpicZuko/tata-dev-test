@@ -15,6 +15,11 @@ const Wrapper = styled.div`
     margin: auto;
     height: 150px;
   }
+  @media (max-width: 380px) {
+    width: 300px;
+    margin: auto;
+    height: 150px;
+  }
   .react-multiple-carousel__arrow {
     background-color: rgba(255, 255, 255, 1);
     border: none;

@@ -23,10 +23,10 @@ const StyledOrderContent = styled.div`
     border-radius: 30px;
   }
   @media (max-width: 380px) {
-    width: 368px;
+    width: 308px;
     height: 479px;
     border-radius: 30px;
-    margin-left: 10px;
+    margin-left: 50px;
   }
 `;
 const StyledGrillContainer = styled.div`
@@ -172,8 +172,8 @@ const OrderAmountStyleds = styled.h1`
     word-spacing: 5px;
   }
   @media (max-width: 380px) {
-    width: 388px;
-    word-spacing: 5px;
+    width: 308px;
+    word-spacing: 0px;
     font-size: 20px;
   }
 `;

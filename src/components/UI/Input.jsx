@@ -112,6 +112,25 @@ const getPhoneNumber = (props) => {
   }
   return "";
 };
+const getPhoneNumberMedia = (props) => {
+  if (props.variant === "phonenumber") {
+    return `
+    width: 258px;
+    height: 56px;
+    justify-content: space-between;
+    border-radius: 40px;
+    color:rgba(54, 54, 54, 1);
+    border:none;
+     &:focus {
+        outline: 2px solid ${props.error ? "red" : "rgba(0, 145, 66, 1)"};
+      }
+    box-shadow: 0px 0px 4px 0px rgba(0, 145, 66, 0.1);
+    padding-left: 60px; 
+    padding-right: 80px; 
+     `;
+  }
+  return "";
+};
 const getSelectAddress = (props) => {
   if (props.variant === "selectaddress") {
     return `
@@ -282,6 +301,9 @@ const STYLEDINPUT = styled.input`
     ${(props) => getInputSearchMedia(props)}
     ${(props) => getEnterAmountMedia(props)}
     ${(props) => getSelectAddressMedia(props)}
+  }
+  @media (max-width: 380px) {
+    ${(props) => getPhoneNumberMedia(props)}
   }
 `;
 const wrapperWidth = (props) => {

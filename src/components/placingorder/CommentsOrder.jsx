@@ -17,11 +17,11 @@ const StyledCommentsDiv = styled.div`
     padding: 40px 0px 24px 20px;
   }
   @media (max-width: 380px) {
-    width: 368px;
-    height: 233px;
+    width: 300px;
+    height: 183px;
     border-radius: 30px;
-    padding: 40px 0px 24px 30px;
-    margin: 0px 0px 20px 10px;
+    padding: 20px 0px 24px 30px;
+    margin: 0px 0px 20px 50px;
   }
 `;
 const StyledCommentsH1 = styled.h1`
@@ -30,6 +30,10 @@ const StyledCommentsH1 = styled.h1`
   font-size: 20px;
   line-height: 28px;
   padding-bottom: 24px;
+  @media (max-width: 380px) {
+    font-size: 18px;
+    padding-bottom: 14px;
+  }
 `;
 const StyledCommentsTextarea = styled.textarea`
   width: 456px;
@@ -50,8 +54,8 @@ const StyledCommentsTextarea = styled.textarea`
     padding: 24px;
   }
   @media (max-width: 380px) {
-    width: 308px;
-    height: 115px;
+    width: 208px;
+    height: 95px;
     border-radius: 30px;
     padding: 24px;
   }

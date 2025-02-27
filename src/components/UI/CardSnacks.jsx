@@ -34,7 +34,7 @@ const PRODUCTCARD = styled.div`
     height: 399px;
   }
   @media (max-width: 380px) {
-    width: 350px;
+    width: 300px;
     height: 350px;
   }
 `;
@@ -49,7 +49,7 @@ const IMAGESTYLED = styled.img`
     height: 234px;
   }
   @media (max-width: 380px) {
-    width: 350px;
+    width: 300px;
     height: 200px;
   }
 `;
@@ -89,7 +89,7 @@ const PRICEANDBUTTONCONTAINER = styled.div`
     line-height: 28px;
   }
   @media (max-width: 380px) {
-    width: 320px;
+    width: 290px;
     justify-content: space-between;
   }
 `;

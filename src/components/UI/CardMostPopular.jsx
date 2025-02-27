@@ -58,6 +58,12 @@ const DIVMOSTPOPULAR = styled.div`
     height: 127px;
     border-radius: 20px;
   }
+  @media (max-width: 380px) {
+    width: 300px;
+    height: 127px;
+    border-radius: 10px;
+    margin-left: 30px;
+  }
 `;
 const PopularImages = styled.img`
   width: 154px;
@@ -67,6 +73,8 @@ const PopularImages = styled.img`
   @media (max-width: 450px) {
     width: 104px;
     height: 100px;
+    border-radius: 10px;
+    margin-left: 20px;
   }
 `;
 const PopularH1 = styled.h1`

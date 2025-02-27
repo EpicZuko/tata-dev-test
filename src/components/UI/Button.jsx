@@ -118,7 +118,9 @@ const getPlaceAnOrderFor = ({ disabled, variant }) => {
 const getPlaceAnOrderForMedia = (props) => {
   return props.variant === "Оформить заказ за" && "width: 287px; font-size: 18px;";
 };
-
+const getPlaceAnOrderForMedias = (props) => {
+  return props.variant === "Оформить заказ за" && "width: 207px; font-size: 14px;";
+};
 const getAddAddress = ({ disabled, variant }) => {
   return (
     variant === "Добавить адрес" &&
@@ -249,6 +251,7 @@ const STYLEDBUTTON = styled.button`
   }
   @media (max-width: 428px) {
     ${getReturnToHomeMedias}
+    ${getPlaceAnOrderForMedias}
   }
 `;
 const Button = ({

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import menu from "../../assets/icons/IconView.svg";
 import contacts from "../../assets/icons/IconView (1).svg";

@@ -32,7 +32,7 @@ const PRODUCTCARD = styled.div`
     height: 399px;
   }
   @media (max-width: 380px) {
-    width: 350px;
+    width: 300px;
     height: 370px;
   }
 `;
@@ -47,7 +47,7 @@ const IMAGESTYLED = styled.img`
     height: 234px;
   }
   @media (max-width: 380px) {
-    width: 350px;
+    width: 300px;
     height: 200px;
   }
 `;
@@ -80,6 +80,12 @@ const PRICEANDBUTTONCONTAINER = styled.div`
     props.price > 0 ? "5px 16px 0px 16px" : "45px 16px 0px 16px"};
   @media (max-width: 428px) {
     width: 356px;
+    height: 36px;
+    justify-content: space-between;
+    line-height: 28px;
+  }
+  @media (max-width: 380px) {
+    width: 300px;
     height: 36px;
     justify-content: space-between;
     line-height: 28px;
@@ -218,6 +224,13 @@ const StyledGrillH1 = styled.h1`
     font-size: 28px;
     letter-spacing: 0%;
     padding: 10px 0px 8px 20px;
+  }
+  @media (max-width: 380px) {
+    font-family: Nunito Sans;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 0%;
+    padding: 10px 0px 8px 10px;
   }
 `;
 const CardAndGrill = ({ dataArray, onClick }) => {

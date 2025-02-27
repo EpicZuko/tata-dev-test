@@ -1,7 +1,7 @@
-import React from 'react'
-import { createPortal } from 'react-dom'
-import styled from 'styled-components'
-import icClose from '../../assets/icons/ic_close.svg'
+import React from "react";
+import { createPortal } from "react-dom";
+import styled from "styled-components";
+import icClose from "../../assets/icons/ic_close.svg";
 
 const ModalWrapper = styled.div`
   position: fixed;
@@ -14,31 +14,32 @@ const ModalWrapper = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 101000;
-`
+`;
 
 const ModalContent = styled.div`
   background: white;
   border-radius: 20px;
-  width: ${({ width }) => width || '90%'};
+  width: ${({ width }) => width || "90%"};
   max-width: 1046px;
-  height: ${({ height }) => height || 'auto'};
+  height: ${({ height }) => height || "auto"};
   max-height: 90vh;
   position: relative;
   text-align: center;
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
-    max-width: none;
+    max-height: 90vh;
     border-radius: 0;
   }
 
   @media (max-width: 450px) {
     width: 100%;
-    height: 100%; 
-    max-width: none; 
+    height: 100%;
+    max-height: 105vh;
+    /* max-width: 0px;  */
     border-radius: 0;
   }
-`
+`;
 
 const CloseButton = styled.button`
   position: absolute;
@@ -67,10 +68,10 @@ const CloseButton = styled.button`
     height: 20px;
     filter: invert(1);
   }
-`
+`;
 
 export default function Modal({ isOpen, onClose, children, width, height }) {
-  if (!isOpen) return null
+  if (!isOpen) return null;
 
   return createPortal(
     <ModalWrapper onClick={onClose}>
@@ -80,11 +81,11 @@ export default function Modal({ isOpen, onClose, children, width, height }) {
         onClick={(e) => e.stopPropagation()}
       >
         <CloseButton onClick={onClose}>
-          <img src={icClose} alt='images' />
+          <img src={icClose} alt="images" />
         </CloseButton>
         {children}
       </ModalContent>
     </ModalWrapper>,
-    document.getElementById('modal')
-  )
+    document.getElementById("modal")
+  );
 }

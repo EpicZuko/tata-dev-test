@@ -73,7 +73,7 @@ const LoginToTheSite = ({ isOpen, setIsOpen }) => {
           </Modal>
         </>
       ) : (
-        <p>Вы уже вошли!</p>
+        ''
       )}
     </div>
   );

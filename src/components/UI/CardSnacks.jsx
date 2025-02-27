@@ -217,14 +217,14 @@ const StyledSnacksH1 = styled.h1`
 
 const priceMultipliers = {
   "7-8": 1,
-  "13-14": 1.2, // Увеличение на 20%
-  "19-20": 1.5, // Увеличение на 50%
+  "13-14": 1.2,
+  "19-20": 1.5,
 };
 
 const CardSnacks = ({ dataArray }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
-  const [selected, setSelected] = useState("13-14");
+  const [selected, setSelected] = useState("7-8");
   const [selectedCard, setSelectedCard] = useState(null);
   const dispatch = useDispatch();
 
@@ -247,7 +247,7 @@ const CardSnacks = ({ dataArray }) => {
     const itemWithWeight = {
       ...item,
       selectedWeight: selected,
-      price: updatedPrice, // Передаем новую цену в корзину
+      price: updatedPrice,
     };
 
     dispatch(addToCart(itemWithWeight));

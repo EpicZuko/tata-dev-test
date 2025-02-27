@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import menu from "../../assets/icons/IconView.svg";
 import contacts from "../../assets/icons/IconView (1).svg";
@@ -6,6 +6,7 @@ import basket from "../../assets/icons/Vector (16).svg";
 import user from "../../assets/icons/IconView (2).svg";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleCart } from "../../services/slices/CartSlice";
+import { useNavigate } from "react-router-dom";
 
 const StyledFooter = styled.footer`
   display: none;
@@ -64,12 +65,13 @@ const StyledFooter = styled.footer`
 
 const MobileFooter = () => {
   const cartItems = useSelector((state) => state.cart.items);
+  const navigate = useNavigate();
   const totalItems = cartItems.reduce((total, item) => total + item.count, 0);
 
   const dispatch = useDispatch();
   return (
     <StyledFooter>
-      <div className="active">
+      <div className="active" onClick={() => navigate("/")}>
         <img src={menu} alt="menu" />
         <span>Меню</span>
       </div>

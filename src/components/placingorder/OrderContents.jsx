@@ -66,47 +66,46 @@ const StyledOrderH1 = styled.h1`
   line-height: 28px;
   padding: 40px 0px 0px 40px;
 `;
-const StyledTashCordo = styled.div`
-  display: flex;
-  justify-content: space-between;
-  /* padding: 30px 40px 0px 40px; */
-  margin: 30px 40px 0px 40px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgba(235, 234, 234, 1);
-`;
-const StyledTashCordoH1 = styled.h1`
-  font-family: Nunito Sans;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 22.4px;
-  padding: 0px 0px 16px 0px;
-`;
-const StyledTashCordoSpan = styled.span`
-  font-family: Nunito Sans;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22.4px;
-`;
-const StyledTashCordoH2 = styled.h2`
-  font-family: Nunito Sans;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 22.4px;
-  padding: 0px 0px 16px 0px;
-`;
-const StyledTashOrdoCount = styled.span`
-  font-family: Nunito Sans;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
-`;
-const StyledTashCordoButton = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-  /* padding: 0px 40px 0px 40px; */
-`;
+// const StyledTashCordo = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   /* padding: 30px 40px 0px 40px; */
+//   margin: 30px 40px 0px 40px;
+//   padding-bottom: 40px;
+//   border-bottom: 1px solid rgba(235, 234, 234, 1);
+// `;
+// const StyledTashCordoH1 = styled.h1`
+//   font-family: Nunito Sans;
+//   font-weight: 600;
+//   font-size: 16px;
+//   line-height: 22.4px;
+//   padding: 0px 0px 16px 0px;
+// `;
+// const StyledTashCordoSpan = styled.span`
+//   font-family: Nunito Sans;
+//   font-weight: 500;
+//   font-size: 16px;
+//   line-height: 22.4px;
+// `;
+// const StyledTashCordoH2 = styled.h2`
+//   font-family: Nunito Sans;
+//   font-weight: 600;
+//   font-size: 16px;
+//   line-height: 22.4px;
+//   padding: 0px 0px 16px 0px;
+// `;
+// const StyledTashOrdoCount = styled.span`
+//   font-family: Nunito Sans;
+//   font-weight: 500;
+//   font-size: 20px;
+//   line-height: 28px;
+// `;
+// const StyledTashCordoButton = styled.div`
+//   display: flex;
+//   align-items: center;
+//   gap: 16px;
+//   /* padding: 0px 40px 0px 40px; */
+// `;
 const OrderAmountStyled = styled.div`
   display: flex;
   justify-content: space-between;

@@ -102,7 +102,7 @@ const ModalOverlay = styled.div`
     height: 600px !important;
   }
   @media (max-width: 450px) {
-    padding-top: 40px;
+    padding-top: 130px;
     top: 0;
     left: 0px;
     align-items: normal;

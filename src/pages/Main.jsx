@@ -12,7 +12,6 @@ import {
   dataArrawwGrill,
   dataArrawSnacks,
 } from "../utils/constants/URL";
-import MobileFooter from "../components/mobile-footer/MobileFooter";
 import HeaderList from "../components/header/HeaderList";
 
 const Main = () => {
@@ -26,7 +25,6 @@ const Main = () => {
       <CartBasketsKorzonina />
       <CardSnacks dataArray={dataArrawSnacks} />
       <Footer />
-      <MobileFooter />
     </div>
   );
 };

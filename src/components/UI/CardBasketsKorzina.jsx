@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import {
-  removeFromCart,
   increaseQuantity,
   decreaseQuantity,
   toggleCart,
 } from "../../services/slices/CartSlice";
-import { FiShoppingCart, FiX } from "react-icons/fi";
+import { FiX } from "react-icons/fi";
 import CardBaskets from "../UI/CardBaskets";
 import Button from "./Button";
 import busketimages from "../../assets/icons/basketbuskets.svg";
@@ -65,18 +64,18 @@ const CloseButton = styled.button`
   padding: 20px 20px 0px 0px;
 `;
 
-const CartButton = styled.button`
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: rgba(247, 247, 247, 1);
-  border: none;
-  color: white;
-  padding: 10px 15px;
-  font-size: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-`;
+// const CartButton = styled.button`
+//   position: fixed;
+//   top: 20px;
+//   right: 20px;
+//   background: rgba(247, 247, 247, 1);
+//   border: none;
+//   color: white;
+//   padding: 10px 15px;
+//   font-size: 20px;
+//   border-radius: 50%;
+//   cursor: pointer;
+// `;
 
 const BasketH1 = styled.h1`
   font-family: Nunito Sans;
@@ -232,7 +231,6 @@ const EmptyCart = styled.div`
 `;
 
 const CartBasketsKorzonina = () => {
-  
   const cartItems = useSelector((state) => state.cart.items);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   const isCartOpen = useSelector((state) => state.cart.isCartOpen);

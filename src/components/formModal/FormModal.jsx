@@ -18,7 +18,7 @@ const ToggleWrapper = styled.div`
   @media (max-width: 450px) {
     width: 388px;
     height: 56px;
-    margin: 0px 0px 0px 20px;
+    margin:60px 0px 0px 20px;
   }
 `;
 const ToggleInput = styled.input`
@@ -59,17 +59,20 @@ const Card = styled.div`
   margin: 8px 0px 0px 40px;
   display: flex;
   flex-direction: column;
+  @media (max-width: 450px) {
+    margin: 40px 0px 40px 20px;
+  }
 `;
-const CardStyled = styled.div`
-  width: 395px;
-  height: 138px;
-  border-radius: 20px;
-  padding: 20px;
-  background: ${(props) => (props.active ? "#f8f8f8" : "#f2f2f2")};
-  margin: 8px 0px 0px 40px;
-  display: flex;
-  flex-direction: column;
-`;
+// const CardStyled = styled.div`
+//   width: 395px;
+//   height: 138px;
+//   border-radius: 20px;
+//   padding: 20px;
+//   background: ${(props) => (props.active ? "#f8f8f8" : "#f2f2f2")};
+//   margin: 8px 0px 0px 40px;
+//   display: flex;
+//   flex-direction: column;
+// `;
 
 const EditIcon = styled.img`
   cursor: pointer;

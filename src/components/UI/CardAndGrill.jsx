@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart } from "../../services/slices/CartSlice";
 import styled from "styled-components";
 import Button from "./Button";
@@ -214,7 +214,7 @@ const StyledGrillH1 = styled.h1`
 `;
 const CardAndGrill = ({ dataArray, onClick }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState("13-14");
+  const [selected, setSelected] = useState("7-8");
   const [selectedCard, setSelectedCard] = useState(null);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
@@ -308,7 +308,10 @@ const CardAndGrill = ({ dataArray, onClick }) => {
                   </StyledH1>
                   <Button
                     variant="Добавить в корзину"
-                    onClick={() => handleAddToCart(selectedCard)}
+                    onClick={() => {
+                      handleAddToCart(selectedCard);
+                      setIsOpen(false);
+                    }}
                   >
                     Добавить в корзину
                   </Button>

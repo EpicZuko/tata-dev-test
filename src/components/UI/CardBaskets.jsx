@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../UI/Button";
-import basketimages from "../../assets/icons/image (2).svg";
+// import basketimages from "../../assets/icons/image (2).svg";
 
 const BasketContainer = styled.div`
   background-color: rgba(247, 247, 247, 1);

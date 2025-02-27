@@ -48,6 +48,9 @@ const StyledText = styled.p`
   line-height: 22.4px;
   text-align: center;
   padding: 0px 0px 36px 0px;
+  @media (max-width: 450px) {
+    padding: 30px 0px 36px 0px;
+  }
 `;
 
 const Card = styled.div`

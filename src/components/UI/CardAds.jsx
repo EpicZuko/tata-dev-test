@@ -67,6 +67,11 @@ const StyledImage = styled.img`
     height: 117px;
     border-radius: 11px;
   }
+  @media (max-width: 380px) {
+    width: 350px;
+    height: 117px;
+    border-radius: 11px;
+  }
 `
 const StyledH1 = styled.h1`
   position: absolute;

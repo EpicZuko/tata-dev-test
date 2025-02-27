@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import menu from "../../assets/icons/IconView.svg";
 import contacts from "../../assets/icons/IconView (1).svg";
@@ -6,7 +6,7 @@ import basket from "../../assets/icons/Vector (16).svg";
 import user from "../../assets/icons/IconView (2).svg";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleCart } from "../../services/slices/CartSlice";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const StyledFooter = styled.footer`
   display: none;
@@ -20,7 +20,7 @@ const StyledFooter = styled.footer`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 30px 0;
+    padding: 15px 0;
     z-index: 1000;
 
     div {
@@ -30,6 +30,8 @@ const StyledFooter = styled.footer`
       font-size: 14px;
       color: gray;
       position: relative;
+      cursor: pointer;
+      transition: color 0.2s ease-in-out;
     }
 
     img {
@@ -38,7 +40,8 @@ const StyledFooter = styled.footer`
     }
 
     .active {
-      color: black;
+      color: green;
+      font-weight: bold;
     }
 
     .cart-badge {
@@ -66,25 +69,41 @@ const StyledFooter = styled.footer`
 const MobileFooter = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const navigate = useNavigate();
+  const location = useLocation();
+  const dispatch = useDispatch();
+
   const totalItems = cartItems.reduce((total, item) => total + item.count, 0);
 
-  const dispatch = useDispatch();
   return (
     <StyledFooter>
-      <div className="active" onClick={() => navigate("/")}>
+      <div
+        className={location.pathname === "/" ? "active" : ""}
+        onClick={() => navigate("/")}
+      >
         <img src={menu} alt="menu" />
         <span>Меню</span>
       </div>
-      <div>
+      <div
+        className={location.pathname === "/contacts" ? "active" : ""}
+        onClick={() => navigate("/contacts")}
+      >
         <img src={contacts} alt="contacts" />
         <span>Контакты</span>
       </div>
-      <div className="cart-badge" onClick={() => dispatch(toggleCart())}>
+      <div
+        className={`cart-badge ${
+          location.pathname === "/cart" ? "active" : ""
+        }`}
+        onClick={() => dispatch(toggleCart())}
+      >
         <img src={basket} alt="basket" />
         <span>Корзина</span>
         {totalItems > 0 ? <span className="badge">{totalItems}</span> : ""}
       </div>
-      <div>
+      <div
+        className={location.pathname === "/profile" ? "active" : ""}
+        onClick={() => navigate("/profile")}
+      >
         <img src={user} alt="user" />
         <span>Профиль</span>
       </div>

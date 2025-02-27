@@ -18,6 +18,10 @@ const StyledImages = styled.img`
     width: 388px;
     height: 388px;
   }
+  @media (max-width: 380px) {
+    width: 300px;
+    height: 228px;
+  }
 `;
 const StyledH1 = styled.h1`
   font-family: Nunito Sans;
@@ -26,6 +30,9 @@ const StyledH1 = styled.h1`
   line-height: 33.6px;
   text-align: center;
   padding: 0px 0px 24px 0px;
+  @media (max-width: 380px) {
+    padding: 0px 0px 4px 0px;
+  }
 `;
 const StyledText = styled.p`
   font-family: Nunito Sans;
@@ -37,7 +44,11 @@ const StyledText = styled.p`
   @media (max-width: 450px) {
     padding: 0px 0px 109px 0px;
   }
+  @media (max-width: 450px) {
+    padding: 0px 0px 19px 0px;
+  }
 `;
+
 const NotFoundPage = () => {
   const navigate = useNavigate();
 

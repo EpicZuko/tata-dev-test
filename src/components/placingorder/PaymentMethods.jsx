@@ -68,7 +68,13 @@ const StyledPayments = styles.div`
   height: 285px;
   border-radius: 30px;
   padding: 20px 0px 0px 20px;
-
+  }
+  @media (max-width: 450px) {
+  width: 368px;
+  height: 285px;
+  border-radius: 30px;
+  padding: 20px 0px 0px 20px;
+  margin-left: 10px;
   }
 
 `;
@@ -91,6 +97,9 @@ padding: 20px 0px 10px 0px;
 `;
 const StyledPaymentsDiv = styles.div`
 padding: 0px 0px 24px 0px;
+@media (max-width: 380px) {
+width: 328px;
+}
 `;
 function BpRadio(props) {
   return (

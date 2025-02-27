@@ -65,6 +65,7 @@ const IMAGES = styled.img`
   background-image: cover;
   cursor: pointer;
   @media (max-width: 430px) {
+    border-radius: 10px;
     width: 101px;
     background-color: rgba(0, 145, 66, 1);
     height: 121px;
@@ -100,9 +101,13 @@ const ModalOverlay = styled.div`
     object-fit: cover;
     width: 400px !important;
     height: 600px !important;
+    @media (max-width: 450px) {
+      width: 100% !important;
+      height: 100% !important;
+    }
   }
   @media (max-width: 450px) {
-    padding-top: 130px;
+    padding-top: 0px;
     top: 0;
     left: 0px;
     align-items: normal;
@@ -119,6 +124,11 @@ const ModalContent = styled.div`
   align-items: center;
   overflow: hidden;
   position: relative;
+  @media (max-width: 450px) {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+  }
 `;
 
 const CloseButton = styled.button`

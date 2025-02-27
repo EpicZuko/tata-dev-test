@@ -48,7 +48,7 @@ const getAddToCart = ({ disabled, variant }) => {
 const getAddToCartMedia = (props) => {
   return (
     props.variant === "Добавить в корзину" &&
-    "width:388px; height:65px; font-size:24px;"
+    "width:350px; height:65px; font-size:24px;"
   );
 };
 const getToPlaceAnOrder = ({ disabled, variant }) => {
@@ -78,6 +78,10 @@ const getReturnToHome = ({ disabled, variant }) => {
 const getReturnToHomeMedia = (props) => {
   return props.variant === "Вернуться на главную" && "width:388px;";
 };
+const getReturnToHomeMedias = (props) => {
+  return props.variant === "Вернуться на главную" && "width:330px;";
+};
+
 const getLogin = ({ disabled, variant }) => {
   return (
     variant === "Войти" &&
@@ -112,7 +116,7 @@ const getPlaceAnOrderFor = ({ disabled, variant }) => {
   );
 };
 const getPlaceAnOrderForMedia = (props) => {
-  return props.variant === "Оформить заказ за" && "width: 287px;";
+  return props.variant === "Оформить заказ за" && "width: 287px; font-size: 18px;";
 };
 
 const getAddAddress = ({ disabled, variant }) => {
@@ -242,6 +246,9 @@ const STYLEDBUTTON = styled.button`
     ${getPlaceAnOrderForMedia}
     ${getSaveMedia}
     ${getDontSaveMedia}
+  }
+  @media (max-width: 428px) {
+    ${getReturnToHomeMedias}
   }
 `;
 const Button = ({

@@ -17,10 +17,20 @@ const StyledForm = styled.form`
     border-radius: 30px;
     padding: 20px 0px 0px 20px;
   }
+  @media (max-width: 380px) {
+    width: 368px;
+    height: 415px;
+    border-radius: 30px;
+    padding: 20px 0px 0px 20px;
+    margin-left: 10px;
+  }
 `;
 const StyledInputName = styled.div`
   @media (max-width: 450px) {
     width: 388px;
+  }
+  @media (max-width: 380px) {
+    width: 328px;
   }
 `;
 const StyledLabelName = styled.label`
@@ -65,11 +75,17 @@ const StyledInputNumber = styled.div`
   @media (max-width: 450px) {
     width: 388px;
   }
+  @media (max-width: 380px) {
+    width: 328px;
+  }
 `;
 const StyledInput = styled.div`
   width: 456px;
   @media (max-width: 450px) {
     width: 388px;
+  }
+  @media (max-width: 380px) {
+    width: 328px;
   }
 `;
 const Personalnformation = () => {

@@ -14,7 +14,7 @@ const CardAndGrillStyled = styled.div`
   gap: 24px;
   margin: 0px 0px -200px 0px;
   @media (max-width: 450px) {
-    margin: 0px 0px 24px 0px;
+    margin: 0px 0px 100px 0px;
   }
 `;
 const PRODUCTCARD = styled.div`
@@ -29,9 +29,13 @@ const PRODUCTCARD = styled.div`
   &:hover {
     transform: scale(1.01);
   }
-  @media (max-width: 428px) {
+  @media (max-width: 450px) {
     width: 388px;
     height: 399px;
+  }
+  @media (max-width: 380px) {
+    width: 350px;
+    height: 350px;
   }
 `;
 const IMAGESTYLED = styled.img`
@@ -40,9 +44,13 @@ const IMAGESTYLED = styled.img`
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   cursor: pointer;
-  @media (max-width: 428px) {
+  @media (max-width: 450px) {
     width: 388px;
     height: 234px;
+  }
+  @media (max-width: 380px) {
+    width: 350px;
+    height: 200px;
   }
 `;
 const NAMESTYLEDH1 = styled.h1`
@@ -56,6 +64,10 @@ const NAMESTYLEDH1 = styled.h1`
     font-family: Nunito Sans;
     font-weight: 700;
     font-size: 24px;
+  }
+  @media (max-width: 380px) {
+    font-size: 18px;
+    padding: 0px 0px 0px 10px;
   }
 `;
 const TEXTPARAGRAP = styled.p`
@@ -75,6 +87,10 @@ const PRICEANDBUTTONCONTAINER = styled.div`
     height: 36px;
     justify-content: space-between;
     line-height: 28px;
+  }
+  @media (max-width: 380px) {
+    width: 320px;
+    justify-content: space-between;
   }
 `;
 const BUTTONDIV = styled.div`
@@ -156,7 +172,7 @@ const ToggleWrapper = styled.div`
   height: 56px;
   margin: 0px 0px 120px 36px;
   @media (max-width: 450px) {
-    width: 388px;
+    width: 350px;
     height: 56px;
     margin: 0px 0px 0px 20px;
   }
@@ -179,6 +195,9 @@ const ToggleLabel = styled.label`
   transition: 0.3s;
   background: ${({ active }) => (active ? "white" : "transparent")};
   font-weight: ${({ active }) => (active ? "bold" : "normal")};
+  @media (max-width: 450px) {
+    font-size: 12px;
+  }
 `;
 const ButtonsDiv = styled.div`
   margin: 0px 0px 0px 36px;
@@ -196,7 +215,7 @@ const StyledH1 = styled.h1`
   line-height: 28px;
   margin: 0px 0px 20px 0px;
   @media (max-width: 450px) {
-    margin: 0px 0px 200px 0px;
+    margin: 0px 0px 40px 0px;
     font-size: 24px;
   }
 `;

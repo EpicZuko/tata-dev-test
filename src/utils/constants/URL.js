@@ -41,7 +41,7 @@ export const storiesCard = {
   },
   mobileLarge: {
     breakpoint: { max: 428, min: 320 },
-    items: 4,
+    items: 3,
   },
   mobile: {
     breakpoint: { max: 320, min: 0 },

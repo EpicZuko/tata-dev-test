@@ -16,6 +16,13 @@ const StyledCommentsDiv = styled.div`
     border-radius: 30px;
     padding: 40px 0px 24px 20px;
   }
+  @media (max-width: 380px) {
+    width: 368px;
+    height: 233px;
+    border-radius: 30px;
+    padding: 40px 0px 24px 30px;
+    margin: 0px 0px 20px 10px;
+  }
 `;
 const StyledCommentsH1 = styled.h1`
   font-family: Nunito Sans;
@@ -42,6 +49,12 @@ const StyledCommentsTextarea = styled.textarea`
     border-radius: 30px;
     padding: 24px;
   }
+  @media (max-width: 380px) {
+    width: 308px;
+    height: 115px;
+    border-radius: 30px;
+    padding: 24px;
+  }
 
   &:focus {
     border-color: rgba(0, 145, 66, 1);
@@ -57,6 +70,17 @@ const StyledCommentsButton = styled.div`
     font-size: 24px;
     line-height: 33.6px;
     text-align: center;
+  }
+  @media (max-width: 380px) {
+    width: 388px;
+    height: 65px;
+    border-radius: 40px;
+    font-family: Nunito Sans;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33.6px;
+    text-align: center;
+    margin-bottom: 80px;
   }
 `;
 const CommentsOrder = () => {

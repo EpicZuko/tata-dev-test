@@ -104,6 +104,13 @@ const StyledPopularH1 = styled.h1`
     letter-spacing: 0%;
     padding: 0px 0px 28px 20px;
   }
+  @media (max-width: 380px) {
+    font-family: Nunito Sans;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0%;
+    padding: 0px 0px 28px 14px;
+  }
 `;
 const CardMostPopular = ({ dataArray }) => {
   return (

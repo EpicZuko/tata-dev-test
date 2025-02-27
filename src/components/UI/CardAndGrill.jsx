@@ -31,6 +31,10 @@ const PRODUCTCARD = styled.div`
     width: 388px;
     height: 399px;
   }
+  @media (max-width: 380px) {
+    width: 350px;
+    height: 370px;
+  }
 `;
 const IMAGESTYLED = styled.img`
   width: 312px;
@@ -38,9 +42,13 @@ const IMAGESTYLED = styled.img`
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   cursor: pointer;
-  @media (max-width: 428px) {
+  @media (max-width: 450px) {
     width: 388px;
     height: 234px;
+  }
+  @media (max-width: 380px) {
+    width: 350px;
+    height: 200px;
   }
 `;
 const NAMESTYLEDH1 = styled.h1`
@@ -194,7 +202,7 @@ const StyledH1 = styled.h1`
   line-height: 28px;
   margin: 0px 0px 20px 0px;
   @media (max-width: 450px) {
-    margin: 0px 0px 200px 0px;
+    margin: 0px 0px 80px 0px;
     font-size: 24px;
   }
 `;

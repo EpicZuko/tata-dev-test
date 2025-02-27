@@ -45,7 +45,6 @@ const CloseButton = styled.button`
   position: absolute;
   top: 15px;
   right: 15px;
-  background: red;
   border: none;
   width: 40px;
   height: 40px;
@@ -59,7 +58,7 @@ const CloseButton = styled.button`
     transform 0.2s ease;
 
   &:hover {
-    background: darkred;
+    background: #e41b1b;
     transform: scale(1.1);
   }
 

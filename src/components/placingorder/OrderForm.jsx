@@ -27,6 +27,12 @@ const StyledOrderFormH1 = styled.h1`
     line-height: 27.52px;
     margin-left: 20px;
   }
+  @media (max-width: 450px) {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27.52px;
+    margin-left: 20px;
+  }
 `;
 const OrderForm = () => {
   return (

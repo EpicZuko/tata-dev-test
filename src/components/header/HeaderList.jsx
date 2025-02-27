@@ -18,7 +18,6 @@ const StyledDiv = styled.div`
   z-index: 10040;
   transition: top 0.3s ease-in-out;
   padding: 0 20px;
-
   @media (max-width: 1024px) {
     height: 70px;
   }
@@ -26,7 +25,7 @@ const StyledDiv = styled.div`
   @media (max-width: 768px) {
     height: 60px;
     top: ${(props) => (props.isVisible ? "0" : "120px")};
-    padding: 0px;
+    padding: 0px 10px 0px 0px;
     overflow-y: auto;
   }
 `;

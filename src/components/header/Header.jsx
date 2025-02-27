@@ -28,6 +28,11 @@ const ImagesLogo = styled.img`
     width: 85px;
     height: 85px;
   }
+  @media (max-width: 380px) {
+    margin: 0px 10px 0px 90px;
+    width: 85px;
+    height: 85px;
+  }
 `;
 const StyledH4 = styled.h4`
   font-family: Nunito Sans;

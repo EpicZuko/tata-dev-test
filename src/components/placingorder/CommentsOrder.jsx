@@ -3,6 +3,14 @@ import styled from "styled-components";
 import Button from "../UI/Button";
 import { useSelector } from "react-redux";
 
+const StyledCommentsContainer = styled.div`
+  @media(max-width: 450px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+`
 const StyledCommentsDiv = styled.div`
   width: 536px;
   height: 233px;
@@ -11,10 +19,14 @@ const StyledCommentsDiv = styled.div`
   padding: 40px 0px 24px 40px;
   margin: 0px 0px 24px 0px;
   @media (max-width: 450px) {
-    width: 428px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 408px;
     height: 233px;
     border-radius: 30px;
-    padding: 40px 0px 24px 20px;
+    padding: 40px 0px 24px 0px;
   }
   @media (max-width: 380px) {
     width: 300px;
@@ -90,7 +102,7 @@ const StyledCommentsButton = styled.div`
 const CommentsOrder = () => {
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   return (
-    <div>
+    <StyledCommentsContainer>
       <StyledCommentsDiv>
         <StyledCommentsH1>Комментарии к заказу</StyledCommentsH1>
         <StyledCommentsTextarea placeholder="Можете оставить комментарий" />
@@ -100,7 +112,7 @@ const CommentsOrder = () => {
           Оформить заказ за <span>{totalPrice}</span> сом
         </Button>
       </StyledCommentsButton>
-    </div>
+    </StyledCommentsContainer>
   );
 };
 

@@ -18,9 +18,10 @@ const StyledOrderContent = styled.div`
   margin-top: 36px;
   margin-bottom: 24px;
   @media (max-width: 450px) {
-    width: 428px;
+    width: 408px;
     height: 479px;
     border-radius: 30px;
+    margin-left: 10px;
   }
   @media (max-width: 380px) {
     width: 308px;

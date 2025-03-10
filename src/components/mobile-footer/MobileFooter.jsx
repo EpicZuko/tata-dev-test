@@ -84,10 +84,10 @@ const MobileFooter = () => {
         <span>Меню</span>
       </div>
       <div
-        className={location.pathname === "/contacts" ? "active" : ""}
-        onClick={() => navigate("/contacts")}
+        className={location.pathname === "/contact" ? "active" : ""}
+        onClick={() => navigate("/contact")}
       >
-        <img src={contacts} alt="contacts" />
+        <img src={contacts} alt="contact" />
         <span>Контакты</span>
       </div>
       <div

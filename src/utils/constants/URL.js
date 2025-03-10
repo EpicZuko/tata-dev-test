@@ -13,7 +13,7 @@ export const cardAds = {
     items: 1,
   },
   mobileLarge: {
-    breakpoint: { max: 428, min: 320 },
+    breakpoint: { max: 450, min: 320 },
     items: 1,
   },
   mobile: {
@@ -40,7 +40,7 @@ export const storiesCard = {
     items: 3,
   },
   mobileLarge: {
-    breakpoint: { max: 428, min: 320 },
+    breakpoint: { max: 450, min: 320 },
     items: 3,
   },
   mobile: {
@@ -63,7 +63,7 @@ export const popularCard = {
     items: 1,
   },
   mobileLarge: {
-    breakpoint: { max: 428, min: 320 },
+    breakpoint: { max: 450, min: 320 },
     items: 1,
   },
   mobile: {

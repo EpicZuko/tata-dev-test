@@ -241,7 +241,7 @@ const STYLEDBUTTON = styled.button`
   transition: 0.4s;
   font-family: Nunito Sans;
 
-  @media (max-width: 428px) {
+  @media (max-width: 450px) {
     ${getAddToCartMedia}
     ${getToPlaceAnOrderMedia}
     ${getReturnToHomeMedia}
@@ -249,7 +249,7 @@ const STYLEDBUTTON = styled.button`
     ${getSaveMedia}
     ${getDontSaveMedia}
   }
-  @media (max-width: 428px) {
+  @media (max-width: 380px) {
     ${getReturnToHomeMedias}
     ${getPlaceAnOrderForMedias}
   }

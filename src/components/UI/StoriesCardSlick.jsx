@@ -30,7 +30,7 @@ const Wrapper = styled.div`
     &:hover {
       background: rgba(0, 111, 51, 1);
     }
-    @media (max-width: 430px) {
+    @media (max-width: 450px) {
       display: none;
     }
   }
@@ -39,7 +39,7 @@ const Wrapper = styled.div`
     &:hover {
       background: rgba(0, 111, 51, 1);
     }
-    @media (max-width: 430px) {
+    @media (max-width: 450px) {
       display: none;
     }
   }
@@ -52,7 +52,7 @@ const StoriesContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0px 30px 0px 20px;
-  @media (max-width: 430px) {
+  @media (max-width: 450px) {
     margin: 0px 0px 0px 0px;
   }
 `;
@@ -64,7 +64,7 @@ const IMAGES = styled.img`
   background-color: rgba(0, 145, 66, 1);
   background-image: cover;
   cursor: pointer;
-  @media (max-width: 430px) {
+  @media (max-width: 450px) {
     border-radius: 10px;
     width: 101px;
     background-color: rgba(0, 145, 66, 1);
@@ -79,7 +79,7 @@ const TEXTH1 = styled.h1`
   text-align: center;
   margin-top: 10px;
   color: black;
-  @media (max-width: 430px) {
+  @media (max-width: 450px) {
     width: 91px;
     color: black;
     margin-top: 0px;

@@ -5,6 +5,7 @@ import OrderForm from "./components/placingorder/OrderForm";
 import Header from "./components/header/Header";
 import NotFoundPage from "./pages/NotFoundPage";
 import MobileFooter from "./components/mobile-footer/MobileFooter";
+import Contacts from "./components/contact/Contacts";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/order" element={<OrderForm />} />
+        <Route path="/contact" element={<Contacts />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <MobileFooter />

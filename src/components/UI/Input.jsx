@@ -297,7 +297,7 @@ const STYLEDINPUT = styled.input`
   ${(props) => getFloor(props)}
   ${(props) => getIntercom(props)}
 
-  @media (max-width:428px) {
+  @media (max-width:450px) {
     ${(props) => getInputSearchMedia(props)}
     ${(props) => getEnterAmountMedia(props)}
     ${(props) => getSelectAddressMedia(props)}

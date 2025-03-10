@@ -99,13 +99,7 @@ const HeaderList = () => {
 
   const listArray = [
     { id: 1, name: "Гриль" },
-    { id: 2, name: "Кебаб" },
-    { id: 3, name: "Мучные изделия" },
-    { id: 4, name: "Закуски" },
-    { id: 5, name: "Салаты" },
-    { id: 6, name: "Первые блюда" },
-    { id: 7, name: "Вторые блюда" },
-    { id: 8, name: "Напитки" },
+    { id: 2, name: "Закуски" },
   ];
 
   return (

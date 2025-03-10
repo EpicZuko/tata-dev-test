@@ -12,6 +12,7 @@ const StyledOrderForm = styled.div`
   @media (max-width: 450px) {
     display: flex;
     flex-direction: column;
+    margin-bottom: 110px;
   }
 `;
 const StyledOrderFormH1 = styled.h1`

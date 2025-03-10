@@ -27,7 +27,7 @@ const PRODUCTCARD = styled.div`
     transform: scale(1.01);
   }
 
-  @media (max-width: 428px) {
+  @media (max-width: 450px) {
     width: 388px;
     height: 399px;
   }
@@ -58,7 +58,7 @@ const NAMESTYLEDH1 = styled.h1`
   line-height: 33.6px;
   letter-spacing: 4%;
   padding: 20px 16px 0px 16px;
-  @media (max-width: 428px) {
+  @media (max-width: 450px) {
     font-family: Nunito Sans;
     font-weight: 700;
     font-size: 24px;
@@ -78,7 +78,7 @@ const PRICEANDBUTTONCONTAINER = styled.div`
   justify-content: space-between;
   padding: ${(props) =>
     props.price > 0 ? "5px 16px 0px 16px" : "45px 16px 0px 16px"};
-  @media (max-width: 428px) {
+  @media (max-width: 450px) {
     width: 356px;
     height: 36px;
     justify-content: space-between;

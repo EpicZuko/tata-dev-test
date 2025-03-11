@@ -15,7 +15,7 @@ const StyledCommentsDiv = styled.div`
   width: 536px;
   height: 233px;
   border-radius: 30px;
-  background: #b80e0e;
+  background: rgba(247, 247, 247, 1);
   padding: 40px 0px 24px 40px;
   margin: 0px 0px 24px 0px;
   @media (max-width: 450px) {

@@ -28,7 +28,8 @@ const ModalContent = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
-    max-height: 90vh;
+    max-height: 70dvh;
+    max-width: 95dvh;
     border-radius: 0;
   }
 

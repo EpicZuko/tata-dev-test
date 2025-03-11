@@ -155,6 +155,16 @@ const IMAGESCARD = styled.img`
     border-top-right-radius: 10px;
     object-fit: cover;
   }
+  @media (max-width: 400px) {
+    width: 400px;
+    height: 200px;
+    max-width: 100%;
+    /* border-top-left-radius: 10px; */
+    /* border-top-right-radius: 10px; */
+    border-radius: 20px;
+    object-fit: cover;
+    padding: 1rem 1rem 0.3rem 1rem;
+  }
 `;
 const ModalH1 = styled.h1`
   font-family: Nunito Sans;
@@ -170,6 +180,12 @@ const ModalH1 = styled.h1`
     margin-left: 20px;
     margin: 10px 0px 4px 20px;
   }
+  @media (max-width: 400px) {
+    line-height: 20.64px;
+    margin-left: 20px;
+    font-size: 15px;
+    margin: 0px 0px 4px 20px;
+  }
 `;
 const ModalP = styled.p`
   font-family: Nunito Sans;
@@ -180,6 +196,10 @@ const ModalP = styled.p`
   margin: 0px 0px 20px 36px;
   @media (max-width: 450px) {
     margin: 0px 0px 20px 20px;
+  }
+  @media (max-width: 400px) {
+    margin: 0px 0px 0px 20px;
+    font-size: 14px;
   }
 `;
 const ToggleWrapper = styled.div`
@@ -223,7 +243,7 @@ const ToggleLabel = styled.label`
 const ButtonsDiv = styled.div`
   margin: 0px 0px 0px 36px;
   @media (max-width: 450px) {
-    margin: 20px 0px 0px 20px;
+    margin: 10px 0px 0px 20px;
   }
 `;
 const ToggleInput = styled.input`

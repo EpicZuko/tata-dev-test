@@ -33,11 +33,20 @@ const ModalContent = styled.div`
   }
 
   @media (max-width: 450px) {
-    width: 100%;
-    height: 100%;
-    max-height: 105vh;
+    width: 90%;
+    height: 90%;
+    max-height: 70dvh;
+    max-width: 95dvh;
     /* max-width: 0px;  */
-    border-radius: 0;
+    border-radius: 10px;
+  }
+  @media (max-width: 400px) {
+    width: 90%;
+    height: 90%;
+    max-height: 70dvh;
+    max-width: 95dvh;
+    /* max-width: 0px;  */
+    border-radius: 10px;
   }
 `;
 

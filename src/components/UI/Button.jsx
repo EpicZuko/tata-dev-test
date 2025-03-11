@@ -48,7 +48,7 @@ const getAddToCart = ({ disabled, variant }) => {
 const getAddToCartMedia = (props) => {
   return (
     props.variant === "Добавить в корзину" &&
-    "width:350px; height:65px; font-size:24px;"
+    "width:280px; height:65px; font-size:24px;"
   );
 };
 const getToPlaceAnOrder = ({ disabled, variant }) => {

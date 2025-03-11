@@ -14,7 +14,7 @@ const CardAndGrillStyled = styled.div`
   gap: 24px;
   margin: 0px 0px -200px 0px;
   @media (max-width: 450px) {
-    margin: 0px 0px 100px 0px;
+    margin: 0px 0px 150px 0px;
   }
 `;
 const PRODUCTCARD = styled.div`
@@ -93,18 +93,27 @@ const PRICEANDBUTTONCONTAINER = styled.div`
   height: 36px;
   justify-content: space-between;
   @media (max-width: 428px) {
-    width: 380px;
+    width: 95%;
+    height: 36px;
+    justify-content: space-between;
+    line-height: 28px;
+  }
+  @media (max-width: 400px) {
+    width: 95%;
     height: 36px;
     justify-content: space-between;
     line-height: 28px;
   }
   @media (max-width: 380px) {
-    width: 290px;
+    width: 95%;
     justify-content: space-between;
   }
 `;
 const BUTTONDIV = styled.div`
   padding: 30px 0px 0px 0px;
+  @media (max-width: 400px) {
+    padding: 0px 0px 0px 0px;
+  }
 `;
 const PRICE = styled.h3`
   font-family: Nunito Sans;
@@ -139,11 +148,12 @@ const IMAGESCARD = styled.img`
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   @media (max-width: 450px) {
-    width: 414px;
+    width: 400px;
     height: 234px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    /* border-radius: 16.76px; */
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
   }
 `;
 const ModalH1 = styled.h1`
@@ -158,6 +168,7 @@ const ModalH1 = styled.h1`
   @media (max-width: 450px) {
     line-height: 20.64px;
     margin-left: 20px;
+    margin: 10px 0px 4px 20px;
   }
 `;
 const ModalP = styled.p`
@@ -182,7 +193,7 @@ const ToggleWrapper = styled.div`
   height: 56px;
   margin: 0px 0px 120px 36px;
   @media (max-width: 450px) {
-    width: 350px;
+    width: 90%;
     height: 56px;
     margin: 0px 0px 0px 20px;
   }
@@ -212,7 +223,7 @@ const ToggleLabel = styled.label`
 const ButtonsDiv = styled.div`
   margin: 0px 0px 0px 36px;
   @media (max-width: 450px) {
-    margin: 36px 0px 0px 20px;
+    margin: 20px 0px 0px 20px;
   }
 `;
 const ToggleInput = styled.input`
@@ -225,7 +236,7 @@ const StyledH1 = styled.h1`
   line-height: 28px;
   margin: 0px 0px 20px 0px;
   @media (max-width: 450px) {
-    margin: 0px 0px 40px 0px;
+    margin: 0px 0px 20px 0px;
     font-size: 24px;
   }
 `;

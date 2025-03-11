@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   justify-content: center;
   padding: 0px 0px 100px 0px;
   @media (max-width: 450px) {
-    padding: 0px 10px 0px 10px;
+    padding: 0px 1rem 0px 1rem;
     margin-bottom: 20px;
     border-radius: 20px;
   }
@@ -54,15 +54,22 @@ const DIVMOSTPOPULAR = styled.div`
   height: 187px;
   border-radius: 30px;
   @media (max-width: 450px) {
-    width: 410px;
+    width: 100%;
     height: 127px;
     border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   @media (max-width: 380px) {
-    width: 300px;
+    width: 100%;
     height: 127px;
     border-radius: 10px;
-    margin-left: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 `;
 const PopularImages = styled.img`
@@ -109,14 +116,12 @@ const StyledPopularH1 = styled.h1`
     font-family: Nunito Sans;
     font-weight: 700;
     font-size: 28px;
-    letter-spacing: 0%;
     padding: 0px 0px 28px 20px;
   }
   @media (max-width: 380px) {
     font-family: Nunito Sans;
     font-weight: 700;
     font-size: 24px;
-    letter-spacing: 0%;
     padding: 0px 0px 28px 14px;
   }
 `;

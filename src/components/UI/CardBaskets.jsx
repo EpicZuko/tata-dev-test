@@ -8,13 +8,15 @@ const BasketContainer = styled.div`
   width: 620px;
   height: auto;
   @media (max-width: 450px) {
-    width: 428px;
+    width: 100%;
+    height: auto;
+    padding: 1.5rem 0px 1.5rem 0px;
   }
 `;
 const BasketDiv = styled.div`
   display: flex;
   @media (max-width: 450px) {
-    width: 428px;
+    width: 100%;
     height: 222px;
     display: flex;
   }
@@ -25,9 +27,10 @@ const Images = styled.img`
   border-radius: 19.17px;
   padding: 24px 24px 0px 24px;
   @media (max-width: 450px) {
-    width: 186px;
+    width: 15rem;
     height: 111px;
     border-radius: 17.82px;
+    object-fit: cover;
   }
 `;
 const StyledNameH1 = styled.h1`
@@ -61,8 +64,10 @@ const StyledPriceContainer = styled.div`
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
-    padding: 0px 0px 10px 0px;
+    justify-content: space-around;
+    padding: 20px 0px 10px 0px;
     margin-top: -100px;
+    gap: 2rem;
   }
 `;
 const StyledButtonContainer = styled.div`
@@ -79,7 +84,15 @@ const SpanDiscount = styled.span`
   line-height: 28px;
   padding: 0px 16px 0px 16px;
 `;
-const CardBaskets = ({ name, kg, price, count,images, onClickPlus, onClickMinus }) => {
+const CardBaskets = ({
+  name,
+  kg,
+  price,
+  count,
+  images,
+  onClickPlus,
+  onClickMinus,
+}) => {
   return (
     <BasketContainer>
       <BasketDiv>

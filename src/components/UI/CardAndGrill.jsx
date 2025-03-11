@@ -28,12 +28,16 @@ const PRODUCTCARD = styled.div`
   }
 
   @media (max-width: 450px) {
-    width: 388px;
+    width: 100%;
     height: 399px;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   @media (max-width: 380px) {
-    width: 300px;
+    width: 100%;
     height: 370px;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 `;
 const IMAGESTYLED = styled.img`
@@ -46,8 +50,8 @@ const IMAGESTYLED = styled.img`
     width: 388px;
     height: 234px;
   }
-  @media (max-width: 380px) {
-    width: 300px;
+  @media (max-width: 390px) {
+    width: 100%;
     height: 200px;
   }
 `;

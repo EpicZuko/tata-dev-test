@@ -58,7 +58,7 @@ const StyledUl = styled.ul`
   }
   @media (max-width: 768px) {
     gap: 12px;
-    padding: 0px 0px 0px 18px;
+    padding: 0px 0px 0px 15px;
   }
 `;
 

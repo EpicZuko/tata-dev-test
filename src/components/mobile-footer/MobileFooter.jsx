@@ -20,8 +20,10 @@ const StyledFooter = styled.footer`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 15px 0;
+    /* padding: 15px 0; */
+    padding: 2rem 0px 2rem 0px;
     z-index: 1000;
+    --tw-shadow: 0px 0px 4px 0px #0091421a;
 
     div {
       display: flex;
@@ -102,7 +104,7 @@ const MobileFooter = () => {
       </div>
       <div
         className={location.pathname === "/profile" ? "active" : ""}
-        onClick={() => navigate("/profile")}
+        onClick={() => navigate("/")}
       >
         <img src={user} alt="user" />
         <span>Профиль</span>

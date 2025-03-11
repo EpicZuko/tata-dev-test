@@ -15,6 +15,9 @@ const Wrapper = styled.div`
   @media (max-width: 450px) {
     padding: 64px 0px 24px 0px;
   }
+  @media (max-width: 450px) {
+    padding: 64px .0rem 4px .5rem;
+  }
   .react-multiple-carousel__arrow {
     background-color: rgba(255, 255, 255, 1);
     border: none;
@@ -53,7 +56,7 @@ const StoriesContainer = styled.div`
   justify-content: space-between;
   margin: 0px 30px 0px 20px;
   @media (max-width: 450px) {
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px -6px;
   }
 `;
 
@@ -65,7 +68,7 @@ const IMAGES = styled.img`
   background-image: cover;
   cursor: pointer;
   @media (max-width: 450px) {
-    border-radius: 10px;
+    border-radius: 20px;
     width: 101px;
     background-color: rgba(0, 145, 66, 1);
     height: 121px;
@@ -82,7 +85,7 @@ const TEXTH1 = styled.h1`
   @media (max-width: 450px) {
     width: 91px;
     color: black;
-    margin-top: 0px;
+    margin-top: 0.5rem;
     font-size: 12.02px;
   }
 `;

@@ -12,11 +12,12 @@ const StyledForm = styled.form`
   margin-top: 36px;
   margin-bottom: 24px;
   @media (max-width: 450px) {
-    width: 408px;
+    width: 95%;
     height: 415px;
     border-radius: 30px;
     padding: 20px 0px 0px 20px;
-    margin-left: 10px;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   @media (max-width: 380px) {
     width: 308px;

@@ -1,9 +1,9 @@
-import React from 'react'
-import Carousel from 'react-multi-carousel'
-import styled from 'styled-components'
-import 'react-multi-carousel/lib/styles.css'
-import { cardAds, CartdAdsAutoPlay } from '../../utils/constants/URL'
-import Button from './Button'
+import React from "react";
+import Carousel from "react-multi-carousel";
+import styled from "styled-components";
+import "react-multi-carousel/lib/styles.css";
+import { cardAds, CartdAdsAutoPlay } from "../../utils/constants/URL";
+import Button from "./Button";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
     height: 150px;
   }
   @media (max-width: 380px) {
-    width: 300px;
+    width: 380px;
     margin: auto;
     height: 150px;
   }
@@ -48,7 +48,7 @@ const Wrapper = styled.div`
       display: none;
     }
   }
-`
+`;
 
 const DIVIMAGESTYLED = styled.div`
   position: relative;
@@ -59,7 +59,7 @@ const DIVIMAGESTYLED = styled.div`
   @media (max-width: 450px) {
     position: relative;
   }
-`
+`;
 
 const StyledImage = styled.img`
   width: 100%;
@@ -68,16 +68,24 @@ const StyledImage = styled.img`
   object-fit: cover;
   background-repeat: no-repeat;
   @media (max-width: 450px) {
-    width: 400px;
-    height: 117px;
-    border-radius: 11px;
+    width: 100%;
+    height: 127px;
+    border-radius: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   @media (max-width: 380px) {
-    width: 350px;
-    height: 117px;
+    width: 380px;
+    height: 127px;
     border-radius: 11px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-`
+`;
 const StyledH1 = styled.h1`
   position: absolute;
   top: 85px;
@@ -98,7 +106,7 @@ const StyledH1 = styled.h1`
     font-size: 28.67px;
     line-height: 24.66px;
   }
-`
+`;
 
 const StyledButton = styled.div`
   position: absolute;
@@ -108,7 +116,7 @@ const StyledButton = styled.div`
   @media (max-width: 450px) {
     display: none;
   }
-`
+`;
 export default function CardAds({ dataArray }) {
   return (
     <Wrapper>
@@ -120,14 +128,14 @@ export default function CardAds({ dataArray }) {
       >
         {dataArray.map((element) => (
           <DIVIMAGESTYLED>
-            <StyledImage src={element.images} alt='images' />
+            <StyledImage src={element.images} alt="images" />
             <StyledH1>{element.name}</StyledH1>
             <StyledButton>
-              <Button variant='Заказать онлайн'>Заказать онлайн</Button>
+              <Button variant="Заказать онлайн">Заказать онлайн</Button>
             </StyledButton>
           </DIVIMAGESTYLED>
         ))}
       </Carousel>
     </Wrapper>
-  )
+  );
 }

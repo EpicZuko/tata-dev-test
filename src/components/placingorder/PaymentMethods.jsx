@@ -70,11 +70,12 @@ const StyledPayments = styles.div`
   padding: 20px 0px 0px 20px;
   }
   @media (max-width: 450px) {
-  width: 408px;
+  width: 95%;
   height: 285px;
   border-radius: 30px;
   padding: 20px 0px 0px 20px;
-  margin-left: 10px;
+  margin-left: 1rem;
+  margin-right:1rem;
   }
 
 `;

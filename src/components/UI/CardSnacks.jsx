@@ -30,12 +30,16 @@ const PRODUCTCARD = styled.div`
     transform: scale(1.01);
   }
   @media (max-width: 450px) {
-    width: 388px;
+    width: 100%;
     height: 399px;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   @media (max-width: 380px) {
-    width: 300px;
+    width: 100%;
     height: 350px;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 `;
 const IMAGESTYLED = styled.img`
@@ -45,11 +49,11 @@ const IMAGESTYLED = styled.img`
   border-top-right-radius: 30px;
   cursor: pointer;
   @media (max-width: 450px) {
-    width: 388px;
+    width: 100%;
     height: 234px;
   }
   @media (max-width: 380px) {
-    width: 300px;
+    width: 100%;
     height: 200px;
   }
 `;

@@ -19,6 +19,21 @@ const HeaderStyled = styled.header`
   background: rgba(255, 255, 255, 1);
   width: 100%;
   height: 128px;
+  @media (max-width: 450px) {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (max-width: 392px) {
+    width: 100%;
+    padding-left: 6rem;
+    padding-right: 4rem;
+  }
+  @media (max-width: 380px) {
+    width: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 `;
 const ImagesLogo = styled.img`
   margin: 0px 24px 0px 0px;

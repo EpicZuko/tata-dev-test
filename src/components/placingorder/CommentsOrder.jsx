@@ -4,13 +4,13 @@ import Button from "../UI/Button";
 import { useSelector } from "react-redux";
 
 const StyledCommentsContainer = styled.div`
-  @media(max-width: 450px) {
+  @media (max-width: 450px) {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
-`
+`;
 const StyledCommentsDiv = styled.div`
   width: 536px;
   height: 233px;
@@ -23,10 +23,11 @@ const StyledCommentsDiv = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 408px;
+    width: 95%;
     height: 233px;
     border-radius: 30px;
     padding: 40px 0px 24px 0px;
+    margin: 0px 6.5rem 1rem 6.5rem;
   }
   @media (max-width: 380px) {
     width: 300px;
@@ -60,16 +61,20 @@ const StyledCommentsTextarea = styled.textarea`
   resize: none; /* Запрещает изменение размера */
   outline: none;
   @media (max-width: 450px) {
-    width: 388px;
+    width: 90%;
     height: 115px;
     border-radius: 30px;
     padding: 24px;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   @media (max-width: 380px) {
-    width: 208px;
+    width: 90%;
     height: 95px;
     border-radius: 30px;
     padding: 24px;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   &:focus {

@@ -77,6 +77,14 @@ const StyledPayments = styles.div`
   margin-left: 1rem;
   margin-right:1rem;
   }
+     @media (max-width: 400px) {
+  width: 90%;
+  height: 285px;
+  border-radius: 30px;
+  padding: 20px 0px 0px 20px;
+  margin-left: .8rem;
+  margin-right: 6rem;
+  }
     @media (max-width: 394px) {
   width: 92%;
   height: 285px;
@@ -108,6 +116,9 @@ const StyledPaymentsDiv = styles.div`
 padding: 0px 0px 24px 0px;
 @media (max-width: 450px) {
 width: 348px;
+}
+@media (max-width: 400px) {
+width: 270px;
 }
 @media (max-width: 394px) {
 width: 300px;

@@ -35,6 +35,12 @@ const PRODUCTCARD = styled.div`
     margin-left: 1rem;
     margin-right: 1rem;
   }
+  @media (max-width: 400px) {
+    width: 90%;
+    height: 399px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
   @media (max-width: 380px) {
     width: 100%;
     height: 350px;

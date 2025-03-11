@@ -35,7 +35,11 @@ const StyledFooter = styled.footer`
       cursor: pointer;
       transition: color 0.2s ease-in-out;
     }
-
+   div > span {
+    font-weight:400;
+    font-size: .75rem;
+    line-height: 1rem;
+   }
     img {
       width: 24px;
       height: 24px;

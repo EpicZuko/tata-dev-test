@@ -24,6 +24,11 @@ const HeaderStyled = styled.header`
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  @media (max-width: 400px) {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 1rem;
+  }
   @media (max-width: 392px) {
     width: 100%;
     padding-left: 6rem;

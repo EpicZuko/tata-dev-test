@@ -19,10 +19,19 @@ const StyledOrderContent = styled.div`
   margin-bottom: 24px;
   @media (max-width: 450px) {
     width: 95%;
-    height: 479px;
+    height: auto;
     border-radius: 30px;
     margin-left: 1rem;
     margin-right: 1rem;
+    padding-bottom: 1rem;
+  }
+  @media (max-width: 400px) {
+    width: 90%;
+    height: auto;
+    border-radius: 30px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-bottom: 1rem;
   }
   @media (max-width: 394px) {
     width: 92%;
@@ -33,9 +42,10 @@ const StyledOrderContent = styled.div`
   }
   @media (max-width: 380px) {
     width: 308px;
-    height: 479px;
+    height: auto;
     border-radius: 30px;
     margin-left: 50px;
+    padding-bottom: 1rem;
   }
 `;
 const StyledGrillContainer = styled.div`

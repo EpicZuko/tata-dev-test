@@ -29,6 +29,17 @@ const StyledCommentsDiv = styled.div`
     padding: 40px 0px 24px 0px;
     margin: 0px 6.5rem 1rem 6.5rem;
   }
+  @media (max-width: 400px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    height: 233px;
+    border-radius: 30px;
+    padding: 40px 0px 24px 0px;
+    margin: 0px 6.5rem 1rem 6.5rem;
+  }
   @media (max-width: 394px) {
     display: flex;
     align-items: center;

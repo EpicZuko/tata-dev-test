@@ -36,7 +36,7 @@ const Wrapper = styled.div`
       background: rgba(0, 111, 51, 1);
     }
     @media (max-width: 450px) {
-      display: none;
+      left: 2rem;
     }
   }
   .react-multiple-carousel__arrow--right {
@@ -45,7 +45,7 @@ const Wrapper = styled.div`
       background: rgba(0, 111, 51, 1);
     }
     @media (max-width: 450px) {
-      display: none;
+      right: 2rem;
     }
   }
 `;
@@ -122,8 +122,6 @@ export default function CardAds({ dataArray }) {
     <Wrapper>
       <Carousel
         responsive={cardAds}
-        autoPlay={CartdAdsAutoPlay.autoPlay}
-        autoPlaySpeed={CartdAdsAutoPlay.autoPlaySpeed}
         infinite={CartdAdsAutoPlay.infinite}
       >
         {dataArray.map((element) => (

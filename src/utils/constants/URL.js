@@ -60,7 +60,7 @@ export const popularCard = {
   },
   tablet: {
     breakpoint: { max: 800, min: 464 },
-    items: 1,
+    items: 2,
   },
   mobileLarge: {
     breakpoint: { max: 450, min: 320 },

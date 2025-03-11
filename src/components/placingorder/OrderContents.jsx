@@ -24,6 +24,13 @@ const StyledOrderContent = styled.div`
     margin-left: 1rem;
     margin-right: 1rem;
   }
+  @media (max-width: 394px) {
+    width: 92%;
+    height: 479px;
+    border-radius: 30px;
+    margin-left: .8rem;
+    margin-right: 6rem;
+  }
   @media (max-width: 380px) {
     width: 308px;
     height: 479px;

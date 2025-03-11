@@ -15,7 +15,7 @@ const StyledCommentsDiv = styled.div`
   width: 536px;
   height: 233px;
   border-radius: 30px;
-  background: rgba(247, 247, 247, 1);
+  background: #b80e0e;
   padding: 40px 0px 24px 40px;
   margin: 0px 0px 24px 0px;
   @media (max-width: 450px) {
@@ -28,6 +28,17 @@ const StyledCommentsDiv = styled.div`
     border-radius: 30px;
     padding: 40px 0px 24px 0px;
     margin: 0px 6.5rem 1rem 6.5rem;
+  }
+  @media (max-width: 394px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 92%;
+    height: 233px;
+    border-radius: 30px;
+    padding: 40px 0px 24px 0px;
+    margin: 0px 6rem 1rem 6rem;
   }
   @media (max-width: 380px) {
     width: 300px;

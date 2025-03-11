@@ -19,6 +19,14 @@ const StyledForm = styled.form`
     margin-left: 1rem;
     margin-right: 1rem;
   }
+  @media (max-width: 394px) {
+    width: 92%;
+    height: 415px;
+    border-radius: 30px;
+    padding: 20px 0px 0px 20px;
+    margin-left: .8rem;
+    margin-right: 6rem;
+  }
   @media (max-width: 380px) {
     width: 308px;
     height: 415px;
@@ -30,6 +38,9 @@ const StyledForm = styled.form`
 const StyledInputName = styled.div`
   @media (max-width: 450px) {
     width: 358px;
+  }
+  @media (max-width: 394px) {
+    width: 300px;
   }
   @media (max-width: 380px) {
     width: 258px;
@@ -77,6 +88,9 @@ const StyledInputNumber = styled.div`
   @media (max-width: 450px) {
     width: 358px;
   }
+  @media (max-width: 394px) {
+    width: 300px;
+  }
   @media (max-width: 380px) {
     width: 258px;
   }
@@ -85,6 +99,9 @@ const StyledInput = styled.div`
   width: 456px;
   @media (max-width: 450px) {
     width: 358px;
+  }
+  @media (max-width: 394px) {
+    width: 300px;
   }
   @media (max-width: 380px) {
     width: 258px;

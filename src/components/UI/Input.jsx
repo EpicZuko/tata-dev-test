@@ -127,6 +127,7 @@ const getPhoneNumberMedia = (props) => {
     box-shadow: 0px 0px 4px 0px rgba(0, 145, 66, 0.1);
     padding-left: 60px; 
     padding-right: 80px; 
+    font-size: 16px;
      `;
   }
   return "";

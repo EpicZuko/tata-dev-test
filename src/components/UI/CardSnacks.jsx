@@ -149,11 +149,11 @@ const IMAGESCARD = styled.img`
   border-bottom-left-radius: 20px;
   @media (max-width: 450px) {
     width: 400px;
-    height: 234px;
+    height: 200px;
     max-width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 20px;
     object-fit: cover;
+    padding: 1rem 1rem 0.3rem 1rem;
   }
   @media (max-width: 400px) {
     width: 400px;
